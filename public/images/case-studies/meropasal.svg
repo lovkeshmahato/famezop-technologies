@@ -1,0 +1,22 @@
+<svg width="800" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="500" fill="#F6F8FB" />
+  <rect width="800" height="500" fill="url(#grid-meropasal)" opacity="0.5" />
+  <defs>
+    <pattern id="grid-meropasal" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#EAF0FF" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <g>
+    <line x1="0" y1="127" x2="800" y2="132" stroke="#0052FF" stroke-opacity="0.12" stroke-width="1" />
+    <line x1="0" y1="193" x2="800" y2="209" stroke="#0052FF" stroke-opacity="0.12" stroke-width="1" />
+    <line x1="0" y1="300" x2="800" y2="355" stroke="#0052FF" stroke-opacity="0.12" stroke-width="1" />
+    <line x1="0" y1="376" x2="800" y2="325" stroke="#0052FF" stroke-opacity="0.12" stroke-width="1" />
+    <circle cx="204" cy="191" r="139" fill="#0052FF" opacity="0.26" />
+    <circle cx="659" cy="59" r="192" fill="#0052FF" opacity="0.24" />
+    <circle cx="756" cy="399" r="152" fill="#0052FF" opacity="0.18" />
+    <circle cx="691" cy="485" r="82" fill="#0052FF" opacity="0.19" />
+    <circle cx="10" cy="290" r="91" fill="#0052FF" opacity="0.13" />
+  </g>
+  <rect x="40" y="400" width="354" height="44" rx="10" fill="#0A0A0B" opacity="0.92" />
+  <text x="60" y="428" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF">Famezop Case Study</text>
+</svg>

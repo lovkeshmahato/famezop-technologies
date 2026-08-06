@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #0a0a0b;
+}
+
+* {
+  scroll-behavior: auto;
+}
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background-color: #0052ff;
+  color: #ffffff;
+}
+
+/* Custom scrollbar — desktop, kept unobtrusive */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #d7deea;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b7c2d6;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .container-content {
+    @apply mx-auto w-full max-w-content px-6 md:px-10 lg:px-16;
+  }
+
+  .section-padding {
+    @apply py-section-mobile md:py-section;
+  }
+
+  .grid-12 {
+    @apply grid grid-cols-4 gap-x-5 md:grid-cols-8 md:gap-x-6 lg:grid-cols-12 lg:gap-x-8;
+  }
+
+  .highlight-blue {
+    @apply text-blue;
+  }
+
+  .card-border {
+    @apply border border-ink/10;
+  }
+
+  .noise-grid {
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+}
+
+/* Reduced motion: disable all custom motion, snap to end states */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Custom cursor — desktop pointer devices only, never touch */
+@media (hover: hover) and (pointer: fine) {
+  .custom-cursor-enabled {
+    cursor: none;
+  }
+}

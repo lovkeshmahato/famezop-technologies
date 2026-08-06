@@ -1,0 +1,84 @@
+export const siteConfig = {
+  name: "Famezop Technologies",
+  shortName: "Famezop",
+  description:
+    "Famezop Technologies is a global software development company building custom software, AI solutions, SaaS products, and enterprise systems for businesses across Nepal, India, the UAE, and worldwide.",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.famezop.com",
+  ogImage: "/og/default.svg",
+  links: {
+    linkedin: "https://www.linkedin.com/company/famezop-technologies",
+    twitter: "https://twitter.com/famezoptech",
+    github: "https://github.com/famezop",
+    instagram: "https://www.instagram.com/famezoptechnologies",
+  },
+  email: "hello@famezop.com",
+  phone: "+977-1-4000000",
+  whatsapp: "https://wa.me/9779800000000",
+};
+
+export const offices = [
+  {
+    country: "Nepal",
+    city: "Kathmandu",
+    address: "Durbar Marg, Kathmandu 44600, Nepal",
+    phone: "+977-1-4000000",
+    isHQ: true,
+    coords: { top: "38%", left: "72%" },
+  },
+  {
+    country: "India",
+    city: "Bengaluru",
+    address: "Koramangala, Bengaluru 560034, Karnataka, India",
+    phone: "+91-80-40000000",
+    isHQ: false,
+    coords: { top: "44%", left: "66%" },
+  },
+  {
+    country: "UAE",
+    city: "Dubai",
+    address: "Business Bay, Dubai, United Arab Emirates",
+    phone: "+971-4-0000000",
+    isHQ: false,
+    coords: { top: "40%", left: "58%" },
+  },
+];
+
+export const mainNav = [
+  { label: "Services", href: "/services" },
+  { label: "Industries", href: "/industries" },
+  { label: "Technology", href: "/technology" },
+  { label: "Portfolio", href: "/portfolio" },
+  { label: "Pricing", href: "/pricing" },
+  { label: "Blog", href: "/blog" },
+  { label: "About", href: "/about" },
+];
+
+export const footerNav = {
+  services: [
+    { label: "Custom Software Development", href: "/services/custom-software-development" },
+    { label: "AI Development", href: "/services/ai-development" },
+    { label: "SaaS Development", href: "/services/saas-development" },
+    { label: "Mobile App Development", href: "/services/mobile-app-development" },
+    { label: "Web Development", href: "/services/web-development" },
+    { label: "UI/UX Design", href: "/services/ui-ux-design" },
+  ],
+  industries: [
+    { label: "Healthcare", href: "/industries/healthcare" },
+    { label: "Banking & Finance", href: "/industries/banking-finance" },
+    { label: "Retail & Ecommerce", href: "/industries/retail-ecommerce" },
+    { label: "Education", href: "/industries/education" },
+    { label: "Logistics", href: "/industries/logistics" },
+  ],
+  company: [
+    { label: "About Us", href: "/about" },
+    { label: "Careers", href: "/careers" },
+    { label: "Case Studies", href: "/portfolio" },
+    { label: "Blog", href: "/blog" },
+    { label: "Contact", href: "/contact" },
+  ],
+  legal: [
+    { label: "Privacy Policy", href: "/privacy-policy" },
+    { label: "Terms of Service", href: "/terms" },
+    { label: "Sitemap", href: "/sitemap" },
+  ],
+};

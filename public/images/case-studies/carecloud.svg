@@ -1,0 +1,22 @@
+<svg width="800" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="500" fill="#F6F8FB" />
+  <rect width="800" height="500" fill="url(#grid-carecloud)" opacity="0.5" />
+  <defs>
+    <pattern id="grid-carecloud" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#EAF0FF" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <g>
+    <line x1="0" y1="110" x2="800" y2="98" stroke="#0052FF" stroke-opacity="0.12" stroke-width="1" />
+    <line x1="0" y1="202" x2="800" y2="186" stroke="#0052FF" stroke-opacity="0.12" stroke-width="1" />
+    <line x1="0" y1="304" x2="800" y2="358" stroke="#0052FF" stroke-opacity="0.12" stroke-width="1" />
+    <line x1="0" y1="393" x2="800" y2="373" stroke="#0052FF" stroke-opacity="0.12" stroke-width="1" />
+    <circle cx="273" cy="239" r="77" fill="#0052FF" opacity="0.13" />
+    <circle cx="181" cy="437" r="101" fill="#0052FF" opacity="0.22" />
+    <circle cx="303" cy="96" r="88" fill="#0052FF" opacity="0.11" />
+    <circle cx="66" cy="228" r="141" fill="#0052FF" opacity="0.17" />
+    <circle cx="467" cy="105" r="164" fill="#0052FF" opacity="0.10" />
+  </g>
+  <rect x="40" y="400" width="354" height="44" rx="10" fill="#0A0A0B" opacity="0.92" />
+  <text x="60" y="428" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF">Famezop Case Study</text>
+</svg>

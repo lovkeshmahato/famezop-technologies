@@ -1,0 +1,22 @@
+<svg width="800" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="500" fill="#F6F8FB" />
+  <rect width="800" height="500" fill="url(#grid-eduneta)" opacity="0.5" />
+  <defs>
+    <pattern id="grid-eduneta" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#EAF0FF" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <g>
+    <line x1="0" y1="128" x2="800" y2="79" stroke="#0052FF" stroke-opacity="0.12" stroke-width="1" />
+    <line x1="0" y1="204" x2="800" y2="153" stroke="#0052FF" stroke-opacity="0.12" stroke-width="1" />
+    <line x1="0" y1="309" x2="800" y2="330" stroke="#0052FF" stroke-opacity="0.12" stroke-width="1" />
+    <line x1="0" y1="383" x2="800" y2="349" stroke="#0052FF" stroke-opacity="0.12" stroke-width="1" />
+    <circle cx="772" cy="279" r="89" fill="#0052FF" opacity="0.08" />
+    <circle cx="231" cy="444" r="117" fill="#0052FF" opacity="0.13" />
+    <circle cx="151" cy="409" r="186" fill="#0052FF" opacity="0.21" />
+    <circle cx="345" cy="316" r="139" fill="#0052FF" opacity="0.23" />
+    <circle cx="683" cy="290" r="64" fill="#0052FF" opacity="0.28" />
+  </g>
+  <rect x="40" y="400" width="354" height="44" rx="10" fill="#0A0A0B" opacity="0.92" />
+  <text x="60" y="428" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF">Famezop Case Study</text>
+</svg>

@@ -1,0 +1,22 @@
+<svg width="800" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="500" fill="#0A0A0B" />
+  <rect width="800" height="500" fill="url(#grid-customvssaas)" opacity="0.5" />
+  <defs>
+    <pattern id="grid-customvssaas" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#151A2E" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <g>
+    <line x1="0" y1="123" x2="800" y2="160" stroke="#0052FF" stroke-opacity="0.12" stroke-width="1" />
+    <line x1="0" y1="210" x2="800" y2="155" stroke="#0052FF" stroke-opacity="0.12" stroke-width="1" />
+    <line x1="0" y1="284" x2="800" y2="274" stroke="#0052FF" stroke-opacity="0.12" stroke-width="1" />
+    <line x1="0" y1="375" x2="800" y2="408" stroke="#0052FF" stroke-opacity="0.12" stroke-width="1" />
+    <circle cx="771" cy="360" r="63" fill="#0052FF" opacity="0.25" />
+    <circle cx="41" cy="98" r="57" fill="#0052FF" opacity="0.26" />
+    <circle cx="463" cy="87" r="153" fill="#0052FF" opacity="0.22" />
+    <circle cx="368" cy="431" r="41" fill="#0052FF" opacity="0.16" />
+    <circle cx="636" cy="441" r="98" fill="#0052FF" opacity="0.26" />
+  </g>
+  <rect x="40" y="400" width="380" height="44" rx="10" fill="#FFFFFF" opacity="0.92" />
+  <text x="60" y="428" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#0A0A0B">Famezop Technologies</text>
+</svg>
