@@ -128,9 +128,26 @@ either way.
 
 ## Email (Resend)
 
-Get an API key at [resend.com/api-keys](https://resend.com/api-keys), set
-`RESEND_API_KEY`, `RESEND_FROM_EMAIL` (must be a verified sending domain),
-and `RESEND_NOTIFY_EMAIL`. Templates are in `emails/templates.ts`.
+Account is connected; a `sending_access`-scoped API key ("Famezop Website")
+is set in `.env.local` for local dev. Set the same `RESEND_API_KEY`,
+`RESEND_FROM_EMAIL`, and `RESEND_NOTIFY_EMAIL` in your hosting provider's
+environment variables — the key is a secret and isn't checked into the
+repo. Templates are in `emails/templates.ts`.
+
+**Domain verification is pending.** The `famezop.com` domain was added in
+Resend but isn't verified yet, so `notifications@famezop.com` can't send
+real mail until these DNS records are added at your domain registrar:
+
+| Type | Name | Value | Priority |
+|---|---|---|---|
+| TXT | `resend._domainkey` | `p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC5y7YLlpqht2W9/8w/QMtwchRYC43+JQ9kmox9ti4t42QZpA0CTzgWoSFIE3moDRtYVBOIBMFk/9W5HuFGH1u7WzMVlcByhLcpyyqGfrdjx798+sI8+LIK2YBvr/9S3hqxTcLqGk/Hr1XQXr35f7HWB7oLBZKgJHmz+ebFvuxZiQIDAQAB` | — |
+| MX | `send` | `feedback-smtp.us-east-1.amazonses.com` | 10 |
+| TXT | `send` | `v=spf1 include:amazonses.com ~all` | — |
+
+After adding those, verification usually completes within a few minutes to
+a few hours (DNS propagation). Until then, `sendContactEmails` /
+`sendNewsletterConfirmation` will fail Resend-side sends for real
+recipients — check Resend's dashboard logs if emails aren't arriving.
 
 ## Swapping in Clash Display / General Sans
 
