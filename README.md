@@ -61,21 +61,19 @@ To connect to it:
    transaction one).
 2. `npm run prisma:studio` to browse data at `http://localhost:5555`.
 
-**⚠️ Row Level Security is disabled on both tables.** Supabase auto-provisions
-a public REST API (PostgREST) in front of every table regardless of whether
-the app uses `supabase-js` — this app doesn't, it connects with Prisma over
-the direct/pooler Postgres connection, but the tables are still reachable via
-that REST API using the project's anon key. Since `Lead` and
-`NewsletterSubscriber` contain contact-form PII, turn on RLS before treating
-this as production-ready:
+**Row Level Security is enabled** on `Lead`, `NewsletterSubscriber`, and
+`_prisma_migrations`, with no policies — Supabase auto-provisions a public
+REST API (PostgREST) in front of every table regardless of whether the app
+uses `supabase-js`, and these tables hold contact-form PII, so they're
+locked out of that API entirely. Prisma's direct/pooler connection is
+unaffected (RLS only governs PostgREST). Only add a policy if you actually
+want client-side/supabase-js code to query one of these tables:
 
 ```sql
-ALTER TABLE public."Lead" ENABLE ROW LEVEL SECURITY;
-ALTER TABLE public."NewsletterSubscriber" ENABLE ROW LEVEL SECURITY;
--- With RLS on and no policies, the PostgREST API can no longer read/write
--- these tables at all (Prisma's direct connection is unaffected — it
--- bypasses PostgREST entirely). Only add a policy if you actually intend
--- to query these tables from client-side/supabase-js code.
+-- Example: allow the anon role to insert (but not read) newsletter signups
+-- via supabase-js, if you ever want that path instead of the Server Action.
+CREATE POLICY "Allow anon insert" ON "NewsletterSubscriber"
+  FOR INSERT TO anon WITH CHECK (true);
 ```
 
 To create a fresh Supabase project (e.g. for staging) instead of reusing the
