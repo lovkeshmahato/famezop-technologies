@@ -1,20 +1,28 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useReducedMotion } from "@/lib/use-reduced-motion";
 
 export function Preloader() {
   const reduced = useReducedMotion();
   const [visible, setVisible] = useState(false);
+  // Persists across React Strict Mode's dev-only double-invoke of this
+  // effect (mount → cleanup → mount again on the same instance), so the
+  // sessionStorage read only ever resolves once, but each real mount still
+  // gets its own fresh hide-timer.
+  const shouldShowRef = useRef<boolean | null>(null);
 
   useEffect(() => {
     if (reduced) return;
-    if (typeof window === "undefined") return;
-    if (sessionStorage.getItem("famezop-preloaded")) return;
+
+    if (shouldShowRef.current === null) {
+      shouldShowRef.current = !sessionStorage.getItem("famezop-preloaded");
+      if (shouldShowRef.current) sessionStorage.setItem("famezop-preloaded", "1");
+    }
+    if (!shouldShowRef.current) return;
 
     setVisible(true);
-    sessionStorage.setItem("famezop-preloaded", "1");
     const timeout = setTimeout(() => setVisible(false), 1100);
     return () => clearTimeout(timeout);
   }, [reduced]);

@@ -27,6 +27,7 @@ export function Hero() {
           <AnimatedText
             as="h1"
             text="Building Future-Ready Software That Powers Businesses Worldwide"
+            highlight="Future-Ready Software"
             className="text-balance font-heading text-4xl font-semibold leading-[1.05] tracking-tight text-ink sm:text-6xl lg:text-hero-lg"
             splitBy="word"
           />
