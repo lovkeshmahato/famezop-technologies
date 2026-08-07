@@ -44,15 +44,43 @@ See `.env.example` for the full list. Summary:
 | `NEXT_PUBLIC_SITE_URL` | Correct canonical URLs, sitemap, OG tags | Defaults to `https://www.famezop.com` |
 | `NEXT_PUBLIC_GA_ID` / `GOOGLE_SITE_VERIFICATION` | Analytics / Search Console | |
 
-## Database (Prisma)
+## Database (Prisma + Supabase)
 
-```bash
-# Local Postgres via Docker
-docker run --name famezop-db -e POSTGRES_PASSWORD=postgres -p 5432:5432 -d postgres
+Production database is Supabase project **`bltrzsdjknsbfqbcojdv`** in the
+"Famezop Technologies" org (`ap-northeast-1`). The `Lead` and
+`NewsletterSubscriber` tables (plus the `_prisma_migrations` history row for
+`prisma/migrations/20260807000000_init`) are already created there — no
+migration needs to be re-run for that project.
 
-npm run prisma:migrate   # creates Lead + NewsletterSubscriber tables
-npm run prisma:studio    # browse data at http://localhost:5555
+To connect to it:
+
+1. Supabase Dashboard → this project → **Connect** button → copy the
+   **Transaction pooler** string into `DATABASE_URL`, and the **Session
+   pooler** string into `DIRECT_URL` (see `.env.example` for the exact
+   query-param suffixes Prisma needs on each — `pgbouncer=true` on the
+   transaction one).
+2. `npm run prisma:studio` to browse data at `http://localhost:5555`.
+
+**⚠️ Row Level Security is disabled on both tables.** Supabase auto-provisions
+a public REST API (PostgREST) in front of every table regardless of whether
+the app uses `supabase-js` — this app doesn't, it connects with Prisma over
+the direct/pooler Postgres connection, but the tables are still reachable via
+that REST API using the project's anon key. Since `Lead` and
+`NewsletterSubscriber` contain contact-form PII, turn on RLS before treating
+this as production-ready:
+
+```sql
+ALTER TABLE public."Lead" ENABLE ROW LEVEL SECURITY;
+ALTER TABLE public."NewsletterSubscriber" ENABLE ROW LEVEL SECURITY;
+-- With RLS on and no policies, the PostgREST API can no longer read/write
+-- these tables at all (Prisma's direct connection is unaffected — it
+-- bypasses PostgREST entirely). Only add a policy if you actually intend
+-- to query these tables from client-side/supabase-js code.
 ```
+
+To create a fresh Supabase project (e.g. for staging) instead of reusing the
+one above, run `prisma migrate deploy` against it — `prisma/migrations/`
+already has the full schema checked in.
 
 Models live in `prisma/schema.prisma`. `lib/prisma.ts` exports a shared
 client singleton; `lib/contact-service.ts` / `lib/newsletter-service.ts`
@@ -66,14 +94,32 @@ Content schemas live in `sanity/schemas/`: `service`, `industry`,
 `caseStudy`, `blogPost`, `testimonial`, `job`, `faq`, `teamMember` — each
 with a `slug` and SEO fields (`metaTitle`, `metaDescription`, `ogImage`).
 
-1. Create a project at [sanity.io/manage](https://www.sanity.io/manage).
-2. Set `NEXT_PUBLIC_SANITY_PROJECT_ID` and `NEXT_PUBLIC_SANITY_DATASET`.
-3. Visit `/studio` on your running site — that's the embedded Sanity Studio
-   (`sanity.config.ts`), no separate deploy needed.
-4. Start adding content. Pages fetch via `lib/content/*.ts` (`fetchServices()`,
+Project ID **`roe3ezhc`** (dataset `production`) is already wired into
+`.env.example` / `.env.local` — nothing to create. CORS origins are set for
+`http://localhost:3000`, `https://*.vercel.app`, and `https://www.famezop.com`.
+
+Content is already seeded and published: all 17 services, 16 industries, 34
+FAQs, 6 testimonials, 6 job listings, and 6 team members. **Blog posts and
+case studies are intentionally left on fallback content** — those types have
+image fields, and seeding them without real cover images (no image-upload
+tool was available while wiring this up) would have looked worse than the
+generated placeholder illustrations already in `lib/content/*.ts`. Add real
+blog posts / case studies (with real images) via `/studio` whenever you're
+ready — they'll take over from fallback automatically once published.
+
+Note: this sandbox's network policy blocks outbound requests to
+`sanity.io` directly, so the live connection is untested from here; verify
+it once you run `npm run dev` locally or deploy.
+
+1. Set the same `NEXT_PUBLIC_SANITY_PROJECT_ID` / `NEXT_PUBLIC_SANITY_DATASET`
+   in your hosting provider's environment variables.
+2. Visit `/studio` on your running site — that's the embedded Sanity Studio
+   (`sanity.config.ts`), no separate deploy needed. Log in with whichever
+   Sanity account owns project `roe3ezhc`.
+3. Start adding content. Pages fetch via `lib/content/*.ts` (`fetchServices()`,
    `fetchBlogPosts()`, etc.) with `revalidate: 60` ISR, so new content goes
    live within a minute automatically.
-5. Optional — for instant updates instead of waiting up to 60s: in Sanity
+4. Optional — for instant updates instead of waiting up to 60s: in Sanity
    project settings → API → Webhooks, add a webhook pointing at
    `https://your-site.com/api/revalidate` with the same secret as
    `SANITY_REVALIDATE_SECRET`.

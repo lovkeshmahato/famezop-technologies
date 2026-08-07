@@ -3,8 +3,12 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  // Supabase's transaction pooler (used by DATABASE_URL) doesn't support the
+  // direct connection `prisma migrate` needs — directUrl covers that case.
+  // See https://supabase.com/docs/guides/database/prisma
+  directUrl = env("DIRECT_URL")
 }
 
 enum LeadStatus {
