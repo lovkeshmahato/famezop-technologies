@@ -118,39 +118,6 @@ export function serviceJsonLd(service: {
   };
 }
 
-export function articleJsonLd(post: {
-  title: string;
-  excerpt: string;
-  slug: string;
-  publishedAt: string;
-  updatedAt?: string;
-  author?: string;
-  image?: string;
-}) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: post.title,
-    description: post.excerpt,
-    image: post.image ? [post.image] : undefined,
-    datePublished: post.publishedAt,
-    dateModified: post.updatedAt || post.publishedAt,
-    author: {
-      "@type": "Organization",
-      name: post.author || siteConfig.name,
-    },
-    publisher: {
-      "@type": "Organization",
-      name: siteConfig.name,
-      logo: {
-        "@type": "ImageObject",
-        url: `${siteConfig.url}/logo.png`,
-      },
-    },
-    mainEntityOfPage: `${siteConfig.url}/blog/${post.slug}`,
-  };
-}
-
 export function faqJsonLd(faqs: { question: string; answer: string }[]) {
   return {
     "@context": "https://schema.org",

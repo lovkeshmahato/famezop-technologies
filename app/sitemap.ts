@@ -3,7 +3,6 @@ import { siteConfig } from "@/lib/site";
 import { fetchServices } from "@/lib/content/services";
 import { fetchIndustries } from "@/lib/content/industries";
 import { fetchCaseStudies } from "@/lib/content/case-studies";
-import { fetchBlogPosts } from "@/lib/content/blog";
 import { fetchJobs } from "@/lib/content/jobs";
 
 export const revalidate = 3600;
@@ -16,8 +15,6 @@ const staticRoutes = [
   "/technology",
   "/portfolio",
   "/careers",
-  "/blog",
-  "/pricing",
   "/contact",
   "/faq",
   "/privacy-policy",
@@ -26,14 +23,12 @@ const staticRoutes = [
 ];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const [services, industries, caseStudies, posts, jobs] = await Promise.all([
+  const [services, industries, caseStudies, jobs] = await Promise.all([
     fetchServices(),
     fetchIndustries(),
     fetchCaseStudies(),
-    fetchBlogPosts(),
     fetchJobs(),
   ]);
-
   const now = new Date();
 
   const entries: MetadataRoute.Sitemap = staticRoutes.map((path) => ({
@@ -67,15 +62,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: new Date(caseStudy.publishedAt),
       changeFrequency: "monthly",
       priority: 0.7,
-    });
-  }
-
-  for (const post of posts) {
-    entries.push({
-      url: `${siteConfig.url}/blog/${post.slug}`,
-      lastModified: new Date(post.updatedAt || post.publishedAt),
-      changeFrequency: "monthly",
-      priority: 0.6,
     });
   }
 

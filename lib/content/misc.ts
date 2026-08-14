@@ -51,21 +51,4 @@ export const engagementModels = [
   { title: "Offshore Development Center", description: "A dedicated, branded engineering unit operating as your extension.", bestFor: "Enterprise-scale, multi-year programs" },
 ];
 
-export const pricingTiers = [
-  {
-    name: "Starter",
-    description: "For early-stage products validating a core hypothesis.",
-    features: ["Single dedicated engineer or small pod", "Fixed-price MVP scoping", "Weekly demos", "4 weeks of post-launch support"],
-  },
-  {
-    name: "Growth",
-    description: "For scaling products with an established user base.",
-    features: ["Dedicated team of 3-6 engineers", "Continuous sprint delivery", "Senior architect oversight", "SLA-backed ongoing support"],
-    featured: true,
-  },
-  {
-    name: "Enterprise",
-    description: "For complex, multi-year, compliance-aware programs.",
-    features: ["Offshore Development Center model", "Compliance & security engineering", "Dedicated delivery & account management", "Custom SLA and reporting"],
-  },
-];
+

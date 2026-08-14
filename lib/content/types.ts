@@ -42,21 +42,6 @@ export type CaseStudy = SeoFields & {
   publishedAt: string;
 };
 
-export type BlogPost = SeoFields & {
-  slug: string;
-  title: string;
-  excerpt: string;
-  content: string[];
-  /** Portable Text blocks, present only when sourced live from Sanity. */
-  body?: unknown[];
-  category: string;
-  author: string;
-  image: string;
-  publishedAt: string;
-  updatedAt?: string;
-  readMinutes: number;
-};
-
 export type Testimonial = {
   quote: string;
   author: string;
@@ -80,7 +65,7 @@ export type Job = SeoFields & {
 export type Faq = {
   question: string;
   answer: string;
-  category: "General" | "Process" | "Pricing" | "Technology" | "Security & NDA";
+  category: "General" | "Process" | "Technology" | "Security & NDA";
 };
 
 export type TeamMember = {

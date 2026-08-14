@@ -2,7 +2,6 @@ import { seoFields } from "./seoFields";
 import { service } from "./service";
 import { industry } from "./industry";
 import { caseStudy } from "./caseStudy";
-import { blogPost } from "./blogPost";
 import { testimonial } from "./testimonial";
 import { job } from "./job";
 import { faq } from "./faq";
@@ -13,7 +12,6 @@ export const schemaTypes = [
   service,
   industry,
   caseStudy,
-  blogPost,
   testimonial,
   job,
   faq,

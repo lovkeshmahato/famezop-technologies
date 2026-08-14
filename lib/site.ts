@@ -48,8 +48,6 @@ export const mainNav = [
   { label: "Industries", href: "/industries" },
   { label: "Technology", href: "/technology" },
   { label: "Portfolio", href: "/portfolio" },
-  { label: "Pricing", href: "/pricing" },
-  { label: "Blog", href: "/blog" },
   { label: "About", href: "/about" },
 ];
 
@@ -73,7 +71,6 @@ export const footerNav = {
     { label: "About Us", href: "/about" },
     { label: "Careers", href: "/careers" },
     { label: "Case Studies", href: "/portfolio" },
-    { label: "Blog", href: "/blog" },
     { label: "Contact", href: "/contact" },
   ],
   legal: [

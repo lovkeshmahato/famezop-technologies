@@ -11,15 +11,12 @@ import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { GlobalPresenceSection } from "@/components/sections/GlobalPresenceSection";
 import { EngagementModels } from "@/components/sections/EngagementModels";
-import { PricingPreview } from "@/components/sections/PricingPreview";
-import { BlogPreview } from "@/components/sections/BlogPreview";
 import { CTASection } from "@/components/sections/CTASection";
 import { buildMetadata } from "@/lib/seo";
 import { fetchServices } from "@/lib/content/services";
 import { fetchIndustries } from "@/lib/content/industries";
 import { fetchFeaturedCaseStudies } from "@/lib/content/case-studies";
 import { fetchTestimonials } from "@/lib/content/testimonials";
-import { fetchLatestBlogPosts } from "@/lib/content/blog";
 
 export const metadata: Metadata = buildMetadata({
   title: "Famezop Technologies | Custom Software, AI & Enterprise Solutions",
@@ -29,12 +26,11 @@ export const metadata: Metadata = buildMetadata({
 });
 
 export default async function HomePage() {
-  const [services, industries, caseStudies, testimonials, posts] = await Promise.all([
+  const [services, industries, caseStudies, testimonials] = await Promise.all([
     fetchServices(),
     fetchIndustries(),
     fetchFeaturedCaseStudies(),
     fetchTestimonials(),
-    fetchLatestBlogPosts(3),
   ]);
 
   return (
@@ -51,8 +47,6 @@ export default async function HomePage() {
       <TestimonialsSection testimonials={testimonials} />
       <GlobalPresenceSection />
       <EngagementModels />
-      <PricingPreview />
-      <BlogPreview posts={posts} />
       <CTASection />
     </>
   );

@@ -52,19 +52,9 @@ function abstractSvg({ seed, label, dark = false }) {
 const caseStudies = [
   "meropasal", "carecloud", "zaptrail", "eduneta", "finlynk", "haven",
 ];
-const blogPosts = [
-  "custom-vs-saas", "ai-agent-architecture", "offshore-teams",
-  "core-web-vitals", "mvp-timeline", "security-checklist",
-];
-
 for (const slug of caseStudies) {
   const svg = abstractSvg({ seed: slug, label: "Famezop Case Study", dark: false });
   writeFileSync(path.join(root, "images", "case-studies", `${slug}.svg`), svg);
-}
-
-for (const slug of blogPosts) {
-  const svg = abstractSvg({ seed: slug, label: "Famezop Technologies", dark: true });
-  writeFileSync(path.join(root, "images", "blog", `${slug}.svg`), svg);
 }
 
 // Default OG image (branded fallback)

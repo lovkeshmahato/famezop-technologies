@@ -5,7 +5,6 @@ import { buildMetadata } from "@/lib/seo";
 import { getAllServices } from "@/lib/content/services";
 import { getAllIndustries } from "@/lib/content/industries";
 import { getAllCaseStudies } from "@/lib/content/case-studies";
-import { getAllBlogPosts } from "@/lib/content/blog";
 import { getAllJobs } from "@/lib/content/jobs";
 
 export const metadata: Metadata = buildMetadata({
@@ -39,11 +38,9 @@ export default function SitemapPage() {
         { label: "Home", href: "/" },
         { label: "About", href: "/about" },
         { label: "Technology", href: "/technology" },
-        { label: "Pricing", href: "/pricing" },
         { label: "Contact", href: "/contact" },
         { label: "FAQ", href: "/faq" },
         { label: "Careers", href: "/careers" },
-        { label: "Blog", href: "/blog" },
         { label: "Portfolio", href: "/portfolio" },
       ],
     },
@@ -58,10 +55,6 @@ export default function SitemapPage() {
     {
       title: "Case studies",
       links: getAllCaseStudies().map((c) => ({ label: c.title, href: `/portfolio/${c.slug}` })),
-    },
-    {
-      title: "Blog posts",
-      links: getAllBlogPosts().map((b) => ({ label: b.title, href: `/blog/${b.slug}` })),
     },
     {
       title: "Open roles",

@@ -20,14 +20,6 @@ export const faqs: Faq[] = [
   { category: "Process", question: "What happens if a sprint is delayed?", answer: "We flag risk as early as possible, not at the deadline, and walk through tradeoffs — descope, extend, or add resourcing — together." },
   { category: "Process", question: "Do you provide documentation?", answer: "Yes — technical documentation, API references, and a handover runbook are standard deliverables at project close." },
 
-  // Pricing
-  { category: "Pricing", question: "How much does a custom software project cost?", answer: "It depends heavily on scope — we provide a detailed quote after a discovery call rather than generic ranges that don't reflect your actual requirements." },
-  { category: "Pricing", question: "What engagement models do you offer?", answer: "Fixed Price, Dedicated Team, Time & Material, Staff Augmentation, and Offshore Development Center — see our Pricing page for details." },
-  { category: "Pricing", question: "Do you require a deposit?", answer: "Most engagements start with a milestone-based payment structure agreed upon in the proposal — typically an upfront deposit followed by milestone payments." },
-  { category: "Pricing", question: "Is there a minimum project size?", answer: "We work with MVP-stage startups through enterprise programs — reach out and we'll tell you honestly if your project is a good fit." },
-  { category: "Pricing", question: "Can I switch engagement models mid-project?", answer: "Yes, it's common to start Fixed Price for an MVP and transition to a Dedicated Team model for ongoing iteration." },
-  { category: "Pricing", question: "Do you offer discounts for long-term contracts?", answer: "Yes, dedicated team and long-term retainer engagements typically come with more favorable rates than short fixed-price projects." },
-
   // Technology
   { category: "Technology", question: "What tech stack do you use?", answer: "Primarily TypeScript, React/Next.js, Node.js/NestJS, PostgreSQL, and cloud infrastructure on AWS/GCP/Azure — see our Technology page for the full stack." },
   { category: "Technology", question: "Can you work with our existing codebase?", answer: "Yes, we regularly take over and extend existing codebases — we'll run a technical audit before committing to a timeline." },

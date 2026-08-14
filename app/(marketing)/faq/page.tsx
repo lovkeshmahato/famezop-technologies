@@ -10,7 +10,7 @@ export const revalidate = 60;
 export const metadata: Metadata = buildMetadata({
   title: "Frequently Asked Questions",
   description:
-    "Answers to common questions about working with Famezop Technologies — process, pricing, technology, security, and NDAs.",
+    "Answers to common questions about working with Famezop Technologies — process, technology, security, and NDAs.",
   path: "/faq",
 });
 
@@ -26,7 +26,7 @@ export default async function FaqPage() {
       <PageHeroBanner
         eyebrow="FAQ"
         title="Questions we hear often"
-        description="Everything you need to know about how we work, price, and protect your project."
+        description="Everything you need to know about how we work and protect your project."
         breadcrumbs={[{ name: "FAQ", href: "/faq" }]}
       />
 

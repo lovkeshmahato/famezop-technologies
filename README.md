@@ -8,7 +8,7 @@ and Resend.
 ## Stack
 
 - **Framework:** Next.js 14 (App Router), TypeScript, Server Actions
-- **CMS:** Sanity.io — services, industries, case studies, blog, testimonials, jobs, FAQs, team
+- **CMS:** Sanity.io — services, industries, case studies, testimonials, jobs, FAQs, team
 - **Database:** PostgreSQL via Prisma — contact leads and newsletter subscribers
 - **Email:** Resend — lead notification + confirmation emails
 - **Styling / motion:** Tailwind CSS, Framer Motion, GSAP + ScrollTrigger, Lenis
@@ -24,7 +24,7 @@ npm run dev
 
 The site **runs and renders fully without any external services configured**
 — `lib/content/*.ts` ships realistic fallback content (17 services, 16
-industries, case studies, blog posts, testimonials, jobs, 30+ FAQs) that's
+industries, case studies, testimonials, jobs, 30+ FAQs) that's
 used whenever Sanity isn't configured, and the contact/newsletter forms log
 to the console instead of failing when `RESEND_API_KEY` / `DATABASE_URL`
 aren't set up yet. This makes local development and preview deploys work
@@ -89,7 +89,7 @@ contain the actual write logic, shared by both the Server Actions
 ## CMS (Sanity)
 
 Content schemas live in `sanity/schemas/`: `service`, `industry`,
-`caseStudy`, `blogPost`, `testimonial`, `job`, `faq`, `teamMember` — each
+`caseStudy`, `testimonial`, `job`, `faq`, `teamMember` — each
 with a `slug` and SEO fields (`metaTitle`, `metaDescription`, `ogImage`).
 
 Project ID **`roe3ezhc`** (dataset `production`) is already wired into
@@ -97,12 +97,12 @@ Project ID **`roe3ezhc`** (dataset `production`) is already wired into
 `http://localhost:3000`, `https://*.vercel.app`, and `https://www.famezop.com`.
 
 Content is already seeded and published: all 17 services, 16 industries, 34
-FAQs, 6 testimonials, 6 job listings, and 6 team members. **Blog posts and
-case studies are intentionally left on fallback content** — those types have
+FAQs, 6 testimonials, 6 job listings, and 6 team members. **Case
+studies are intentionally left on fallback content** — those types have
 image fields, and seeding them without real cover images (no image-upload
 tool was available while wiring this up) would have looked worse than the
 generated placeholder illustrations already in `lib/content/*.ts`. Add real
-blog posts / case studies (with real images) via `/studio` whenever you're
+case studies (with real images) via `/studio` whenever you're
 ready — they'll take over from fallback automatically once published.
 
 Note: this sandbox's network policy blocks outbound requests to
@@ -115,7 +115,7 @@ it once you run `npm run dev` locally or deploy.
    (`sanity.config.ts`), no separate deploy needed. Log in with whichever
    Sanity account owns project `roe3ezhc`.
 3. Start adding content. Pages fetch via `lib/content/*.ts` (`fetchServices()`,
-   `fetchBlogPosts()`, etc.) with `revalidate: 60` ISR, so new content goes
+   `fetchCaseStudies()`, etc.) with `revalidate: 60` ISR, so new content goes
    live within a minute automatically.
 4. Optional — for instant updates instead of waiting up to 60s: in Sanity
    project settings → API → Webhooks, add a webhook pointing at
@@ -164,10 +164,9 @@ Nothing else needs to change — every heading already reads `font-heading`.
 ## SEO
 
 - `generateMetadata` on every route, JSON-LD (`Organization` sitewide,
-  `Service`, `Article`, `BreadcrumbList`, `FAQPage`, `JobPosting`) — see `lib/seo.ts`
+  `Service`, `BreadcrumbList`, `FAQPage`, `JobPosting`) — see `lib/seo.ts`
 - `app/sitemap.ts` and `app/robots.ts` are generated from live content
-- `app/feed.xml/route.ts` — blog RSS feed
-- Dynamic OG images for blog posts and case studies via `next/og` (`opengraph-image.tsx` in each `[slug]` route)
+- Dynamic OG images for case studies via `next/og` (`opengraph-image.tsx` in each `[slug]` route)
 
 ## Project structure
 
