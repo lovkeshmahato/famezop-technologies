@@ -42,9 +42,9 @@ export function GlobalPresenceMap() {
                 { x: b.x, y: (b.y / 100) * 62.5 }
               )}
               fill="none"
-              stroke="#0052FF"
-              strokeWidth="0.25"
-              strokeOpacity="0.5"
+              stroke="#5B8DFF"
+              strokeWidth="0.3"
+              strokeOpacity="0.85"
               initial={reduced ? undefined : { pathLength: 0 }}
               whileInView={reduced ? undefined : { pathLength: 1 }}
               viewport={{ once: true }}
@@ -63,7 +63,7 @@ export function GlobalPresenceMap() {
           <div className="relative flex flex-col items-center">
             <span className="absolute h-3 w-3 rounded-full bg-blue animate-pulse-marker" aria-hidden />
             <span className="relative h-2.5 w-2.5 rounded-full bg-blue shadow-[0_0_12px_2px_rgba(0,82,255,0.7)]" />
-            <div className="absolute top-5 whitespace-nowrap rounded-control border border-white/10 bg-white/5 px-2.5 py-1 text-xs font-medium text-white backdrop-blur-sm">
+            <div className="absolute top-5 whitespace-nowrap rounded-control border border-white/20 bg-ink/70 px-2.5 py-1 text-xs font-semibold text-white backdrop-blur-sm">
               {office.city}, {office.country}
             </div>
           </div>

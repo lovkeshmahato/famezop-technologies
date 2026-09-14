@@ -5,7 +5,7 @@ export function TrustedBy() {
   return (
     <section className="border-y border-ink/10 bg-offwhite py-10">
       <div className="container-content">
-        <p className="mb-6 text-center text-xs font-medium uppercase tracking-wider text-gray-body">
+        <p className="mb-6 text-center text-xs font-medium tracking-wide text-gray-body">
           Trusted by companies across Nepal, India, UAE &amp; Global Markets
         </p>
         <Marquee>

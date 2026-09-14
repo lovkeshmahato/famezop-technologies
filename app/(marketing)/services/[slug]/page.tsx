@@ -11,6 +11,7 @@ import { CaseStudyCard } from "@/components/ui/CaseStudyCard";
 import { Accordion } from "@/components/ui/Accordion";
 import { CTASection } from "@/components/sections/CTASection";
 import { ScrollReveal } from "@/components/animations/ScrollReveal";
+import { Button } from "@/components/ui/Button";
 import { Check } from "lucide-react";
 import { getAllFaqs } from "@/lib/content/faqs";
 
@@ -92,12 +93,9 @@ export default async function ServiceDetailPage({ params }: { params: { slug: st
               <p className="mt-2 text-sm text-gray-body">
                 Book a free consultation and we&apos;ll scope {service.title.toLowerCase()} for your specific requirements.
               </p>
-              <a
-                href="/contact"
-                className="mt-5 inline-flex h-11 items-center justify-center rounded-control bg-blue px-5 text-sm font-medium text-white transition-opacity hover:opacity-90"
-              >
+              <Button href="/contact" className="mt-5 w-full">
                 Book Free Consultation
-              </a>
+              </Button>
             </div>
           </div>
         </div>

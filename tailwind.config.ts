@@ -35,6 +35,9 @@ const config: Config = {
       borderRadius: {
         card: "20px",
         control: "12px",
+        // Nested control inside a `control`-radius shell with p-1.5 (6px)
+        // padding — was a hand-computed rounded-[9px] magic number.
+        "control-sm": "9px",
       },
       boxShadow: {
         soft: "0 24px 60px -24px rgba(10, 10, 11, 0.18)",

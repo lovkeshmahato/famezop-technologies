@@ -1,16 +1,27 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { ServiceCard } from "@/components/ui/ServiceCard";
 import { AnimatedText } from "@/components/animations/AnimatedText";
 import { cn } from "@/lib/cn";
 import type { Service } from "@/lib/content/types";
 
+const INITIAL_VISIBLE = 6;
+
 export function ServicesGrid({ services }: { services: Service[] }) {
   const categories = useMemo(() => ["All", ...Array.from(new Set(services.map((s) => s.category)))], [services]);
   const [active, setActive] = useState("All");
+  const [expanded, setExpanded] = useState(false);
+
+  // Collapse back to the short list whenever the filter changes, so
+  // switching categories doesn't leave a stale "show all" state.
+  useEffect(() => {
+    setExpanded(false);
+  }, [active]);
 
   const filtered = active === "All" ? services : services.filter((s) => s.category === active);
+  const visible = expanded ? filtered : filtered.slice(0, INITIAL_VISIBLE);
+  const hasMore = filtered.length > INITIAL_VISIBLE;
 
   return (
     <section className="section-padding">
@@ -29,10 +40,11 @@ export function ServicesGrid({ services }: { services: Service[] }) {
               <button
                 key={category}
                 onClick={() => setActive(category)}
+                aria-pressed={active === category}
                 className={cn(
                   "rounded-full border px-4 py-2 text-sm font-medium transition-colors",
                   active === category
-                    ? "border-blue bg-blue text-white"
+                    ? "border-blue bg-blue text-white font-semibold shadow-[0_0_0_3px_rgba(0,82,255,0.18)]"
                     : "border-ink/15 text-ink/70 hover:border-ink/30"
                 )}
               >
@@ -43,10 +55,22 @@ export function ServicesGrid({ services }: { services: Service[] }) {
         </div>
 
         <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {filtered.map((service) => (
+          {visible.map((service) => (
             <ServiceCard key={service.slug} service={service} />
           ))}
         </div>
+
+        {hasMore && (
+          <div className="mt-10 flex justify-center">
+            <button
+              type="button"
+              onClick={() => setExpanded((value) => !value)}
+              className="rounded-control border border-ink/15 px-6 py-3 text-sm font-medium text-ink transition-colors hover:border-blue hover:text-blue"
+            >
+              {expanded ? "Show fewer services" : `Show all ${filtered.length} services`}
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );

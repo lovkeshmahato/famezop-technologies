@@ -4,6 +4,7 @@ import { useState, useTransition } from "react";
 import { submitContactForm } from "@/app/actions/contact";
 import { getAllServices } from "@/lib/content/services";
 import { cn } from "@/lib/cn";
+import { Button } from "./Button";
 
 const services = getAllServices();
 
@@ -98,13 +99,9 @@ export function ContactForm() {
 
       {status === "error" && <p className="text-sm text-red-500">{error}</p>}
 
-      <button
-        type="submit"
-        disabled={isPending}
-        className="h-12 w-full rounded-control bg-blue text-sm font-medium text-white transition-opacity hover:opacity-90 disabled:opacity-50 sm:w-auto sm:px-8"
-      >
+      <Button type="submit" disabled={isPending} className="w-full disabled:opacity-50 sm:w-auto">
         {isPending ? "Sending..." : "Send message"}
-      </button>
+      </Button>
     </form>
   );
 }

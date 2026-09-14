@@ -68,7 +68,7 @@ export function Navbar() {
         </ul>
 
         <div className="hidden lg:flex">
-          <Button href="/contact" size="md">
+          <Button href="/contact" size="md" showArrow>
             Book Free Consultation
           </Button>
         </div>
@@ -104,7 +104,7 @@ export function Navbar() {
                 </li>
               ))}
               <li className="pt-4">
-                <Button href="/contact" className="w-full">
+                <Button href="/contact" className="w-full" showArrow>
                   Book Free Consultation
                 </Button>
               </li>

@@ -2,6 +2,7 @@
 
 import { useState, useTransition } from "react";
 import { submitJobApplicationForm } from "@/app/actions/contact";
+import { Button } from "./Button";
 
 export function JobApplicationForm({ jobSlug, jobTitle }: { jobSlug: string; jobTitle: string }) {
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
@@ -79,13 +80,9 @@ export function JobApplicationForm({ jobSlug, jobTitle }: { jobSlug: string; job
 
       {status === "error" && <p className="text-sm text-red-500">{error}</p>}
 
-      <button
-        type="submit"
-        disabled={isPending}
-        className="h-12 w-full rounded-control bg-blue text-sm font-medium text-white transition-opacity hover:opacity-90 disabled:opacity-50 sm:w-auto sm:px-8"
-      >
+      <Button type="submit" disabled={isPending} className="w-full disabled:opacity-50 sm:w-auto">
         {isPending ? "Submitting..." : "Submit application"}
-      </button>
+      </Button>
     </form>
   );
 }

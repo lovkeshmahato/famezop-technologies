@@ -51,7 +51,7 @@ export function NewsletterForm({ dark = false }: { dark?: boolean }) {
         <button
           type="submit"
           disabled={isPending}
-          className="h-9 shrink-0 rounded-[9px] bg-blue px-4 text-sm font-medium text-white transition-opacity hover:opacity-90 disabled:opacity-50"
+          className="h-9 shrink-0 rounded-control-sm bg-blue px-4 text-sm font-medium text-white transition-opacity hover:opacity-90 disabled:opacity-50"
         >
           {isPending ? "..." : "Subscribe"}
         </button>

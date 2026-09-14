@@ -20,7 +20,7 @@ export function ProcessTimeline({ steps }: { steps: { step: string; description:
         />
       )}
 
-      <ol className="space-y-10">
+      <ol className="space-y-6">
         {steps.map((item, index) => {
           const isEven = index % 2 === 0;
           return (

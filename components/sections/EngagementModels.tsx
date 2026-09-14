@@ -16,10 +16,12 @@ export function EngagementModels() {
         <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-5">
           {engagementModels.map((model, i) => (
             <ScrollReveal key={model.title} delay={i * 0.05}>
-              <div className="h-full rounded-card border border-ink/10 bg-white p-6">
+              <div className="flex h-full flex-col rounded-card border border-ink/10 bg-white p-6">
                 <p className="font-heading text-base font-semibold text-ink">{model.title}</p>
                 <p className="mt-2 text-sm leading-relaxed text-gray-body">{model.description}</p>
-                <p className="mt-4 text-xs font-medium text-blue">Best for: {model.bestFor}</p>
+                <p className="mt-auto border-t border-ink/5 pt-4 text-xs font-medium text-blue">
+                  Best for: {model.bestFor}
+                </p>
               </div>
             </ScrollReveal>
           ))}
