@@ -14,7 +14,7 @@ export function PageHeroBanner({
   breadcrumbs?: { name: string; href: string }[];
 }) {
   return (
-    <section className="border-b border-ink/10 bg-offwhite pb-16 pt-40 sm:pb-20 sm:pt-48">
+    <section className="border-b border-ink/10 bg-offwhite pb-10 pt-28 sm:pb-14 sm:pt-36">
       <div className="container-content">
         {breadcrumbs && (
           <nav aria-label="Breadcrumb" className="mb-6 flex flex-wrap items-center gap-1.5 text-xs text-gray-body">

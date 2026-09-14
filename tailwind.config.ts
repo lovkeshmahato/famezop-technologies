@@ -49,8 +49,10 @@ const config: Config = {
         glow: "0 0 0 1px rgba(0, 82, 255, 0.35), 0 20px 48px -20px rgba(0, 82, 255, 0.35)",
       },
       spacing: {
-        section: "160px",
-        "section-mobile": "80px",
+        // Was 160px/80px — read as sprawling on real screens, where each
+        // section's whitespace alone could fill most of a viewport.
+        section: "100px",
+        "section-mobile": "56px",
       },
       keyframes: {
         marquee: {

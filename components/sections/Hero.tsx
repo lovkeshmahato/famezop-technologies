@@ -13,7 +13,7 @@ export function Hero() {
   const reduced = useReducedMotion();
 
   return (
-    <section className="relative overflow-hidden pb-20 pt-40 sm:pb-28 sm:pt-48">
+    <section className="relative overflow-hidden pb-12 pt-28 sm:pb-16 sm:pt-36">
       <div
         className="pointer-events-none absolute inset-0"
         style={{

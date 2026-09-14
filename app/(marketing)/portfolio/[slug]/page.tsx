@@ -55,7 +55,7 @@ export default async function CaseStudyDetailPage({ params }: { params: { slug: 
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={jsonLdScript(breadcrumbJsonLd(breadcrumbs))} />
 
-      <section className="pb-16 pt-40 sm:pb-20 sm:pt-48">
+      <section className="pb-10 pt-28 sm:pb-14 sm:pt-36">
         <div className="container-content">
           <nav aria-label="Breadcrumb" className="mb-6 text-xs text-gray-body">
             <Link href="/portfolio" className="hover:text-blue">
