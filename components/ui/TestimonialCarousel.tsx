@@ -61,8 +61,8 @@ export function TestimonialCarousel({ testimonials }: { testimonials: Testimonia
               key={t.author}
               onClick={() => setIndex(i)}
               aria-label={`Go to testimonial ${i + 1}`}
-              className={`h-1.5 rounded-full transition-all duration-300 ${
-                i === index ? "w-6 bg-blue" : "w-1.5 bg-ink/15"
+              className={`h-2.5 rounded-full transition-all duration-300 ${
+                i === index ? "w-6 bg-blue" : "w-2.5 bg-ink/25 hover:bg-ink/40"
               }`}
             />
           ))}

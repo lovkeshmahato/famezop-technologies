@@ -13,7 +13,7 @@ export function EngagementModels() {
           className="max-w-xl text-balance font-heading text-3xl font-semibold tracking-tight text-ink sm:text-4xl"
         />
 
-        <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {engagementModels.map((model, i) => (
             <ScrollReveal key={model.title} delay={i * 0.05}>
               <div className="flex h-full flex-col rounded-card border border-ink/10 bg-white p-6">

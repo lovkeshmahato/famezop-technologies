@@ -3,6 +3,7 @@
 import { useState, useMemo, useEffect } from "react";
 import { ServiceCard } from "@/components/ui/ServiceCard";
 import { AnimatedText } from "@/components/animations/AnimatedText";
+import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/cn";
 import type { Service } from "@/lib/content/types";
 
@@ -35,7 +36,7 @@ export function ServicesGrid({ services }: { services: Service[] }) {
               className="max-w-xl text-balance font-heading text-3xl font-semibold tracking-tight text-ink sm:text-4xl"
             />
           </div>
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap justify-center gap-2 lg:justify-end">
             {categories.map((category) => (
               <button
                 key={category}
@@ -62,13 +63,9 @@ export function ServicesGrid({ services }: { services: Service[] }) {
 
         {hasMore && (
           <div className="mt-10 flex justify-center">
-            <button
-              type="button"
-              onClick={() => setExpanded((value) => !value)}
-              className="rounded-control border border-ink/15 px-6 py-3 text-sm font-medium text-ink transition-colors hover:border-blue hover:text-blue"
-            >
+            <Button variant="secondary" onClick={() => setExpanded((value) => !value)}>
               {expanded ? "Show fewer services" : `Show all ${filtered.length} services`}
-            </button>
+            </Button>
           </div>
         )}
       </div>

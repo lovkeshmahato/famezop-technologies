@@ -5,9 +5,9 @@ export function TestimonialsSection({ testimonials }: { testimonials: Testimonia
   return (
     <section className="section-padding">
       <div className="container-content">
-        <p className="mb-10 text-center text-xs font-semibold uppercase tracking-wider text-blue">
+        <h2 className="mb-10 text-center text-xs font-semibold tracking-wide text-blue">
           What clients say
-        </p>
+        </h2>
         <TestimonialCarousel testimonials={testimonials} />
       </div>
     </section>

@@ -30,33 +30,32 @@ export function IndustriesCarousel({ industries }: { industries: Industry[] }) {
               className="max-w-xl text-balance font-heading text-3xl font-semibold tracking-tight text-ink sm:text-4xl"
             />
           </div>
-          <div className="flex items-center gap-3">
-            <div className="flex gap-2">
-              <button
-                type="button"
-                onClick={() => scrollByCard(-1)}
-                aria-label="Scroll industries left"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-ink/15 text-ink transition-colors hover:border-blue hover:text-blue"
-              >
-                <ChevronLeft className="h-4 w-4" />
-              </button>
-              <button
-                type="button"
-                onClick={() => scrollByCard(1)}
-                aria-label="Scroll industries right"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-ink/15 text-ink transition-colors hover:border-blue hover:text-blue"
-              >
-                <ChevronRight className="h-4 w-4" />
-              </button>
-            </div>
-            <Button href="/industries" variant="secondary" showArrow>
-              View all industries
-            </Button>
-          </div>
+          <Button href="/industries" variant="secondary" showArrow>
+            View all industries
+          </Button>
         </div>
       </div>
 
-      <div ref={scrollerRef} className="container-content mt-10 overflow-x-auto pb-4">
+      <div className="container-content mt-6 flex justify-end gap-2">
+        <button
+          type="button"
+          onClick={() => scrollByCard(-1)}
+          aria-label="Scroll industries left"
+          className="flex h-10 w-10 items-center justify-center rounded-full border border-ink/15 text-ink transition-colors hover:border-blue hover:text-blue"
+        >
+          <ChevronLeft className="h-4 w-4" />
+        </button>
+        <button
+          type="button"
+          onClick={() => scrollByCard(1)}
+          aria-label="Scroll industries right"
+          className="flex h-10 w-10 items-center justify-center rounded-full border border-ink/15 text-ink transition-colors hover:border-blue hover:text-blue"
+        >
+          <ChevronRight className="h-4 w-4" />
+        </button>
+      </div>
+
+      <div ref={scrollerRef} className="container-content mt-3 overflow-x-auto pb-4">
         <div className="flex snap-x snap-mandatory gap-5">
           {industries.map((industry) => (
             <div key={industry.slug} data-industry-card>

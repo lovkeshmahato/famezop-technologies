@@ -31,14 +31,13 @@ export function ProcessTimeline({ steps }: { steps: { step: string; description:
               }`}
             >
               <span
-                className={`absolute left-[9px] top-1 h-3.5 w-3.5 rounded-full border-2 border-blue bg-white sm:left-auto sm:top-1 ${
-                  isEven ? "sm:-right-[7px]" : "sm:-left-[7px]"
+                className={`absolute left-[1px] top-0 flex h-7 w-7 items-center justify-center rounded-full border-2 border-blue bg-white text-[10px] font-bold text-blue ${
+                  isEven ? "sm:left-auto sm:-right-[14px]" : "sm:-left-[14px]"
                 }`}
                 aria-hidden
-              />
-              <p className="text-xs font-semibold uppercase tracking-wider text-blue">
+              >
                 {String(index + 1).padStart(2, "0")}
-              </p>
+              </span>
               <p className="font-heading text-lg font-semibold text-ink">{item.step}</p>
               <p className="text-sm leading-relaxed text-gray-body">{item.description}</p>
             </li>
