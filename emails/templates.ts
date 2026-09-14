@@ -1,3 +1,5 @@
+import { siteConfig } from "@/lib/site";
+
 type ContactNotificationInput = {
   name: string;
   email: string;
@@ -65,7 +67,7 @@ export function contactConfirmationEmail(name: string) {
     `Thanks for reaching out, ${name}`,
     `<p style="margin:0;color:#374151;font-size:14px;line-height:1.7;">
       We've received your message and a member of our team will get back to you within one business day.
-      In the meantime, feel free to explore our <a href="https://www.famezop.com/portfolio" style="color:#0052FF;">recent work</a>.
+      In the meantime, feel free to explore our <a href="${siteConfig.url}/portfolio" style="color:#0052FF;">recent work</a>.
     </p>`
   );
 }

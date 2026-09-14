@@ -3,7 +3,7 @@ export const siteConfig = {
   shortName: "Famezop",
   description:
     "Famezop Technologies is a global software development company building custom software, AI solutions, SaaS products, and enterprise systems for businesses across Nepal, India, the UAE, and worldwide.",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.famezop.com",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://famezoptechnologies.com",
   ogImage: "/og/default.svg",
   links: {
     linkedin: "https://www.linkedin.com/company/famezop-technologies",
@@ -11,7 +11,7 @@ export const siteConfig = {
     github: "https://github.com/famezop",
     instagram: "https://www.instagram.com/famezoptechnologies",
   },
-  email: "hello@famezop.com",
+  email: "hello@famezoptechnologies.com",
   phone: "+977-1-4000000",
   whatsapp: "https://wa.me/9779800000000",
 };

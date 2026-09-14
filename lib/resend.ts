@@ -9,7 +9,7 @@ import {
 const apiKey = process.env.RESEND_API_KEY;
 const resend = apiKey ? new Resend(apiKey) : null;
 
-const FROM = process.env.RESEND_FROM_EMAIL || "Famezop Technologies <notifications@famezop.com>";
+const FROM = process.env.RESEND_FROM_EMAIL || "Famezop Technologies <notifications@famezoptechnologies.com>";
 const NOTIFY_TO = process.env.RESEND_NOTIFY_EMAIL || siteConfig.email;
 
 async function send(to: string, subject: string, html: string) {
