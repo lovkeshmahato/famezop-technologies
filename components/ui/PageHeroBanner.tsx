@@ -35,7 +35,7 @@ export function PageHeroBanner({
         <AnimatedText
           as="h1"
           text={title}
-          className="max-w-3xl font-heading text-4xl font-semibold tracking-tight text-ink sm:text-5xl lg:text-hero-lg"
+          className="max-w-3xl font-heading text-hero-lg font-semibold tracking-tight text-ink"
         />
         {description && <p className="mt-5 max-w-2xl text-base leading-relaxed text-gray-body sm:text-lg">{description}</p>}
       </div>

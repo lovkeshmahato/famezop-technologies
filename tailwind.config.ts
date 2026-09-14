@@ -26,8 +26,12 @@ const config: Config = {
         body: ["var(--font-body)", "ui-sans-serif", "system-ui", "sans-serif"],
       },
       fontSize: {
-        "hero-sm": ["2.75rem", { lineHeight: "1.05", letterSpacing: "-0.02em" }],
-        "hero-lg": ["6rem", { lineHeight: "1.02", letterSpacing: "-0.03em" }],
+        // Fluid instead of a fixed breakpoint jump: previously this was a
+        // flat 96px from the `lg` breakpoint (1024px) all the way up to any
+        // wide desktop, so on real monitors each short phrase in the hero
+        // wrapped to its own giant line. clamp() scales continuously with
+        // viewport width and tops out at 4.5rem (72px) instead of 6rem.
+        "hero-lg": ["clamp(2.25rem, 1.5rem + 3vw, 4.5rem)", { lineHeight: "1.08", letterSpacing: "-0.02em" }],
       },
       maxWidth: {
         content: "1440px",
