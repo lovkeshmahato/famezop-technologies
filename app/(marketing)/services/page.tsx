@@ -10,7 +10,7 @@ export const revalidate = 60;
 export const metadata: Metadata = buildMetadata({
   title: "Software Development Services",
   description:
-    "Custom software, AI development, SaaS, mobile, web, cloud, and enterprise engineering services from Famezop Technologies — delivered by dedicated teams across Nepal, India, and the UAE.",
+    "Custom software, AI, SaaS, mobile, web, cloud, and enterprise engineering from Famezop Technologies — dedicated teams across Nepal, India, and the UAE.",
   path: "/services",
 });
 

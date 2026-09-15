@@ -10,6 +10,8 @@ export const caseStudies: CaseStudy[] = [
     tech: ["Next.js", "NestJS", "PostgreSQL", "Redis"],
     image: "/images/case-studies/meropasal.svg",
     summary: "A multi-branch POS, inventory, and accounting platform that replaced six disconnected legacy tools.",
+    metaDescription:
+      "How Famezop Technologies unified 40 supermarket branches on one POS, inventory, and accounting platform — cutting stockouts 63% and month-end close time 80%.",
     problem:
       "MeroPasal ran 40 supermarket branches on a patchwork of spreadsheets and a decade-old POS system with no central inventory visibility, causing chronic stockouts and reconciliation errors.",
     solution:
@@ -36,6 +38,8 @@ export const caseStudies: CaseStudy[] = [
     tech: ["React", "Node.js", "PostgreSQL", "AWS"],
     image: "/images/case-studies/carecloud.svg",
     summary: "A hospital management system spanning OPD, IPD, billing, and pharmacy across three facilities.",
+    metaDescription:
+      "How Famezop Technologies built a unified hospital OS spanning OPD, IPD, billing, and pharmacy across three facilities — cutting patient wait times 41%.",
     problem:
       "Patient records lived in three separate systems across CareCloud's facilities, forcing front-desk staff to re-enter data and delaying care coordination between departments.",
     solution:
@@ -62,6 +66,8 @@ export const caseStudies: CaseStudy[] = [
     tech: ["React Native", "Go", "PostGIS", "GCP"],
     image: "/images/case-studies/zaptrail.svg",
     summary: "A route optimization and real-time tracking platform built for a fast-growing regional logistics fleet.",
+    metaDescription:
+      "How Famezop Technologies gave a 200-truck logistics fleet real-time GPS tracking and route optimization — lifting on-time delivery 34% and fleet use 19%.",
     problem:
       "ZapTrail's dispatchers were manually assigning routes over phone calls, with no live visibility into truck location, leading to missed delivery windows and idle capacity.",
     solution:
@@ -83,6 +89,8 @@ export const caseStudies: CaseStudy[] = [
     tech: ["Next.js", "Django", "PostgreSQL"],
     image: "/images/case-studies/eduneta.svg",
     summary: "A campus management platform covering admissions, attendance, grading, and parent communication.",
+    metaDescription:
+      "How Famezop Technologies digitized admissions, attendance, and grading for a 12-school network — cutting admissions processing time 55% with 89% parent adoption.",
     problem:
       "Each of EduNeta's 12 schools tracked admissions and attendance on paper, with no consolidated reporting for the network's central administration.",
     solution:
@@ -104,6 +112,8 @@ export const caseStudies: CaseStudy[] = [
     tech: ["Next.js", "NestJS", "PostgreSQL", "AWS"],
     image: "/images/case-studies/finlynk.svg",
     summary: "A digital lending platform with automated credit scoring and regulatory-compliant workflows.",
+    metaDescription:
+      "How Famezop Technologies launched a compliant digital lending platform with automated credit scoring in 90 days, from MVP to regulatory approval.",
     problem:
       "FinLynk needed to launch a digital lending product ahead of a competitive window, but lacked the in-house engineering capacity to build compliant credit workflows fast enough.",
     solution:
@@ -130,6 +140,8 @@ export const caseStudies: CaseStudy[] = [
     tech: ["Next.js", "Node.js", "PostgreSQL"],
     image: "/images/case-studies/haven.svg",
     summary: "A donor and program management platform consolidating impact data across 15 country offices.",
+    metaDescription:
+      "How Famezop Technologies gave a 15-country NGO network one donor CRM and impact-reporting platform — cutting donor report turnaround by 75%.",
     problem:
       "Haven's country offices reported program outcomes in disconnected spreadsheets, making it nearly impossible for headquarters to produce timely donor impact reports.",
     solution:

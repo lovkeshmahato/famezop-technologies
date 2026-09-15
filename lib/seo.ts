@@ -25,9 +25,15 @@ export function buildMetadata({
 }: BuildMetadataArgs): Metadata {
   const url = `${siteConfig.url}${path}`;
   const ogImage = image === false ? undefined : image || siteConfig.ogImage;
+  // Root layout's title template appends " | Famezop Technologies" to every
+  // page title. Some callers (CMS metaTitle fields, the homepage) already
+  // write the brand name into the full title themselves — templating those
+  // again would render it twice in the <title> tag. `absolute` opts out of
+  // the template for exactly those already-branded titles.
+  const resolvedTitle = title.includes(siteConfig.name) ? { absolute: title } : title;
 
   return {
-    title,
+    title: resolvedTitle,
     description,
     alternates: { canonical: url },
     robots: noIndex

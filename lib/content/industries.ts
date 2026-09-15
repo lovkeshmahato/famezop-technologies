@@ -10,7 +10,7 @@ export const industries: Industry[] = [
     challenges: ["Fragmented patient records", "Compliance overhead", "Scheduling and staffing inefficiency"],
     solutions: ["Hospital & clinic management systems", "Telehealth platforms", "EHR integration"],
     metaTitle: "Healthcare Software Development | Famezop Technologies",
-    metaDescription: "Custom healthcare software — hospital management, telehealth, and EHR-integrated platforms built for compliance and scale.",
+    metaDescription: "Custom healthcare software — hospital and clinic management, telehealth platforms, and EHR integration engineered for compliance, patient safety, and scale.",
   },
   {
     slug: "education",
@@ -20,7 +20,7 @@ export const industries: Industry[] = [
     challenges: ["Manual attendance and grading", "Disconnected parent communication", "Fee and admissions tracking"],
     solutions: ["School/campus management platforms", "Learning management systems", "Parent-teacher portals"],
     metaTitle: "Education Software Development | Famezop Technologies",
-    metaDescription: "School and campus management software — admissions, attendance, grading, and parent communication in one platform.",
+    metaDescription: "School and campus management software from Famezop Technologies — admissions, attendance, grading, and parent-teacher communication in one platform.",
   },
   {
     slug: "banking-finance",
@@ -30,7 +30,7 @@ export const industries: Industry[] = [
     challenges: ["Regulatory compliance", "Legacy core banking systems", "Fraud and risk management"],
     solutions: ["Core banking integrations", "Lending & credit scoring platforms", "Fraud detection systems"],
     metaTitle: "Fintech & Banking Software Development | Famezop Technologies",
-    metaDescription: "Secure, compliant banking and fintech software — core banking integration, lending platforms, and fraud detection.",
+    metaDescription: "Secure, regulator-ready banking and fintech software — core banking integration, lending and credit-scoring platforms, and fraud detection systems.",
   },
   {
     slug: "retail-ecommerce",
@@ -40,7 +40,7 @@ export const industries: Industry[] = [
     challenges: ["Multi-channel inventory sync", "Checkout drop-off", "Peak traffic reliability"],
     solutions: ["POS & inventory platforms", "Headless commerce storefronts", "Loyalty & CRM systems"],
     metaTitle: "Retail & Ecommerce Software Development | Famezop Technologies",
-    metaDescription: "POS, inventory, and ecommerce platforms built for multi-channel retail and peak-traffic reliability.",
+    metaDescription: "POS, inventory, and headless ecommerce platforms built for multi-channel retail, loyalty programs, and reliability during peak shopping seasons ahead.",
   },
   {
     slug: "manufacturing",
@@ -50,7 +50,7 @@ export const industries: Industry[] = [
     challenges: ["Production floor visibility", "Supply chain disruption", "Quality control tracking"],
     solutions: ["MES & production tracking", "Supply chain platforms", "IoT-connected quality systems"],
     metaTitle: "Manufacturing Software Solutions | Famezop Technologies",
-    metaDescription: "Production tracking, supply chain, and quality control software for manufacturers.",
+    metaDescription: "Production tracking, supply chain visibility, and IoT-connected quality control software built for manufacturers ready to move beyond spreadsheets.",
   },
   {
     slug: "construction",
@@ -60,7 +60,7 @@ export const industries: Industry[] = [
     challenges: ["Multi-site coordination", "Budget overruns", "Compliance documentation"],
     solutions: ["Project management platforms", "Resource & equipment tracking", "Site inspection apps"],
     metaTitle: "Construction Management Software | Famezop Technologies",
-    metaDescription: "Project, resource, and site management software built for construction firms.",
+    metaDescription: "Project, resource, and site management software for construction firms — budget tracking, equipment coordination, and compliance documentation, built to scale.",
   },
   {
     slug: "logistics",
@@ -70,7 +70,7 @@ export const industries: Industry[] = [
     challenges: ["Route inefficiency", "Real-time shipment visibility", "Warehouse coordination"],
     solutions: ["Fleet & route optimization", "Warehouse management systems", "Real-time tracking platforms"],
     metaTitle: "Logistics Software Development | Famezop Technologies",
-    metaDescription: "Fleet, route, and warehouse management software for logistics and supply chain operators.",
+    metaDescription: "Fleet, route optimization, and warehouse management software for logistics and supply chain operators who need real-time shipment visibility today.",
   },
   {
     slug: "government",
@@ -80,7 +80,7 @@ export const industries: Industry[] = [
     challenges: ["Legacy public systems", "Citizen service delays", "Data transparency requirements"],
     solutions: ["Citizen service portals", "Internal governance systems", "Public data platforms"],
     metaTitle: "Government Software Solutions | Famezop Technologies",
-    metaDescription: "Citizen service and governance platforms built for accountability and public sector requirements.",
+    metaDescription: "Citizen service portals and internal governance platforms built for public-sector accountability, data transparency, and legacy system modernization.",
   },
   {
     slug: "ngo",
@@ -90,7 +90,7 @@ export const industries: Industry[] = [
     challenges: ["Donor and grant tracking", "Program impact reporting", "Limited technical budget"],
     solutions: ["Donor & CRM platforms", "Program management systems", "Impact reporting dashboards"],
     metaTitle: "NGO & Nonprofit Software Development | Famezop Technologies",
-    metaDescription: "Donor management, program tracking, and impact reporting software built for nonprofit budgets and needs.",
+    metaDescription: "Donor management, program tracking, and impact reporting software built for nonprofit budgets — proving real outcomes to funders, boards, and staff.",
   },
   {
     slug: "hospitality-tourism",
@@ -100,7 +100,7 @@ export const industries: Industry[] = [
     challenges: ["Booking channel fragmentation", "Guest experience consistency", "Seasonal demand planning"],
     solutions: ["Property management systems", "Booking & channel manager integration", "Guest experience apps"],
     metaTitle: "Hospitality & Tourism Software | Famezop Technologies",
-    metaDescription: "Booking, property management, and guest experience software for hotels and tour operators.",
+    metaDescription: "Booking, property management, and guest experience software for hotels and tour operators handling seasonal demand and channel fragmentation daily.",
   },
   {
     slug: "real-estate",
@@ -110,7 +110,7 @@ export const industries: Industry[] = [
     challenges: ["Listing data fragmentation", "Lead-to-close tracking", "Document-heavy transactions"],
     solutions: ["Listing & CRM platforms", "Transaction management systems", "Virtual tour integrations"],
     metaTitle: "Real Estate Software Development | Famezop Technologies",
-    metaDescription: "Listing, CRM, and transaction management software for real estate firms and property managers.",
+    metaDescription: "Listing, CRM, and transaction management software for real estate firms and property managers, covering everything from lead capture through closing.",
   },
   {
     slug: "automotive",
@@ -120,7 +120,7 @@ export const industries: Industry[] = [
     challenges: ["Service scheduling inefficiency", "Parts inventory tracking", "Dealer-fleet coordination"],
     solutions: ["Dealer management systems", "Service scheduling platforms", "Fleet tracking software"],
     metaTitle: "Automotive Software Solutions | Famezop Technologies",
-    metaDescription: "Dealership, service scheduling, and fleet management software for automotive businesses.",
+    metaDescription: "Dealer management, service scheduling, and fleet tracking software for automotive businesses coordinating parts, service bays, and vehicles at scale.",
   },
   {
     slug: "telecom",
@@ -130,7 +130,7 @@ export const industries: Industry[] = [
     challenges: ["Complex billing structures", "Network provisioning speed", "Customer churn"],
     solutions: ["Billing & OSS/BSS platforms", "Self-service customer portals", "Provisioning automation"],
     metaTitle: "Telecom Software Development | Famezop Technologies",
-    metaDescription: "Billing, provisioning, and customer platforms built for telecom operators.",
+    metaDescription: "Billing, provisioning automation, and self-service customer portals built for telecom operators managing complex plans and fast network rollouts.",
   },
   {
     slug: "insurance",
@@ -140,7 +140,7 @@ export const industries: Industry[] = [
     challenges: ["Manual claims processing", "Underwriting turnaround time", "Legacy policy systems"],
     solutions: ["Claims management platforms", "Underwriting automation", "Policy administration systems"],
     metaTitle: "Insurance Software Development | Famezop Technologies",
-    metaDescription: "Policy administration, claims, and underwriting automation software for insurers and brokers.",
+    metaDescription: "Claims management, underwriting automation, and policy administration software for insurers and brokers replacing slow, disconnected legacy systems.",
   },
   {
     slug: "entertainment",
@@ -150,7 +150,7 @@ export const industries: Industry[] = [
     challenges: ["Content delivery at scale", "Ticketing and access management", "Rights and royalty tracking"],
     solutions: ["Streaming & content platforms", "Ticketing systems", "Rights management tools"],
     metaTitle: "Entertainment & Media Software | Famezop Technologies",
-    metaDescription: "Streaming, ticketing, and content management platforms for entertainment and media companies.",
+    metaDescription: "Streaming, ticketing, and content management platforms for entertainment and media companies handling rights, royalties, and access control at scale.",
   },
   {
     slug: "agriculture",
@@ -160,7 +160,7 @@ export const industries: Industry[] = [
     challenges: ["Yield and resource tracking", "Supply chain traceability", "Market access for smallholders"],
     solutions: ["Farm management platforms", "Supply chain traceability systems", "Marketplace platforms"],
     metaTitle: "Agriculture Software Development | Famezop Technologies",
-    metaDescription: "Farm management, supply chain traceability, and marketplace software for agribusiness.",
+    metaDescription: "Farm management, supply chain traceability, and marketplace software for agribusiness — connecting smallholder farmers to buyers and financing.",
   },
 ];
 

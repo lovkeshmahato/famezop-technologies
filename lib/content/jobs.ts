@@ -9,6 +9,8 @@ export const jobs: Job[] = [
     location: "Kathmandu, Nepal (Hybrid)",
     employmentType: "Full-time",
     summary: "Lead feature delivery on client platforms spanning Next.js, Node.js, and PostgreSQL.",
+    metaDescription:
+      "Famezop Technologies is hiring a Senior Full-Stack Engineer in Kathmandu to lead feature delivery on client platforms built with Next.js, Node.js, and PostgreSQL.",
     responsibilities: [
       "Own delivery of features end-to-end, from technical design through production launch",
       "Pair with product and design to scope realistic sprint commitments",
@@ -28,6 +30,8 @@ export const jobs: Job[] = [
     location: "Bengaluru, India (Hybrid)",
     employmentType: "Full-time",
     summary: "Build production AI agents and RAG systems for enterprise clients.",
+    metaDescription:
+      "Famezop Technologies is hiring an AI Engineer in Bengaluru to design, build, and evaluate production AI agents and RAG pipelines for enterprise clients.",
     responsibilities: [
       "Design and evaluate agent architectures for client production systems",
       "Build RAG pipelines with strong retrieval evaluation practices",
@@ -47,6 +51,8 @@ export const jobs: Job[] = [
     location: "Remote (Nepal / India)",
     employmentType: "Full-time",
     summary: "Own end-to-end product design across multiple client engagements.",
+    metaDescription:
+      "Famezop Technologies is hiring a remote Product Designer to own end-to-end design — research, prototypes, and design systems — across client engagements.",
     responsibilities: [
       "Run discovery research and translate findings into flows and prototypes",
       "Build and maintain design systems for engineering handoff",
@@ -66,6 +72,8 @@ export const jobs: Job[] = [
     location: "Dubai, UAE (Hybrid)",
     employmentType: "Full-time",
     summary: "Own cloud infrastructure and CI/CD across client and internal platforms.",
+    metaDescription:
+      "Famezop Technologies is hiring a DevOps Engineer in Dubai to own Terraform-managed cloud infrastructure, CI/CD pipelines, and incident response.",
     responsibilities: [
       "Design and maintain Terraform-managed infrastructure across AWS/GCP",
       "Build and improve CI/CD pipelines for multiple client codebases",
@@ -85,6 +93,8 @@ export const jobs: Job[] = [
     location: "Kathmandu, Nepal (Hybrid)",
     employmentType: "Full-time",
     summary: "Build and maintain automated test suites across client platforms.",
+    metaDescription:
+      "Famezop Technologies is hiring a QA Automation Engineer in Kathmandu to build automated test frameworks and run performance testing for client launches.",
     responsibilities: [
       "Design test automation frameworks integrated into CI/CD",
       "Partner with engineers to close coverage gaps before release",
@@ -104,6 +114,8 @@ export const jobs: Job[] = [
     location: "Bengaluru, India (Hybrid)",
     employmentType: "Full-time",
     summary: "Run delivery for 2-3 concurrent client engagements end-to-end.",
+    metaDescription:
+      "Famezop Technologies is hiring a Technical Project Manager in Bengaluru to run delivery for concurrent client engagements from scoping to launch.",
     responsibilities: [
       "Own sprint planning, client communication, and delivery risk management",
       "Translate business requirements into scoped technical backlogs",

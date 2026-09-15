@@ -10,7 +10,7 @@ export const revalidate = 60;
 export const metadata: Metadata = buildMetadata({
   title: "Industries We Serve",
   description:
-    "Famezop Technologies builds software for healthcare, education, banking, retail, logistics, government, NGOs, and 8 more industries across Nepal, India, and the UAE.",
+    "Famezop Technologies builds software for healthcare, education, banking, retail, logistics, government, NGOs, and more across Nepal, India, and the UAE.",
   path: "/industries",
 });
 

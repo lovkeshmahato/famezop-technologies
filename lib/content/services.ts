@@ -29,7 +29,7 @@ export const services: Service[] = [
     process: process5,
     metaTitle: "Custom Software Development Services | Famezop Technologies",
     metaDescription:
-      "We build bespoke ERP, CRM, HRMS, POS, and industry-specific software for hospitals, hotels, restaurants, schools, NGOs, and government agencies across Nepal, India, and the UAE.",
+      "We build bespoke ERP, CRM, HRMS, and POS systems for hospitals, hotels, restaurants, schools, NGOs, and government agencies across Nepal, India, and the UAE.",
     order: 1,
   },
   {
@@ -73,7 +73,7 @@ export const services: Service[] = [
     process: process5,
     metaTitle: "AI Development & Integration Services | Famezop Technologies",
     metaDescription:
-      "We design and ship AI agents, chatbots, and Claude/GPT/Gemini-powered copilots that automate real workflows — not just demos.",
+      "We design and ship AI agents, chatbots, and Claude/GPT/Gemini-powered copilots that automate real workflows — RAG, vector search, and evaluation included.",
     order: 3,
   },
   {
@@ -95,7 +95,7 @@ export const services: Service[] = [
     process: process5,
     metaTitle: "Mobile App Development Company | Famezop Technologies",
     metaDescription:
-      "Native and cross-platform mobile app development with production-grade CI/CD, offline sync, and App Store / Play Store release management.",
+      "Native and cross-platform mobile app development with production-grade CI/CD, offline-first sync, and App Store / Play Store release management handled end to end.",
     order: 4,
   },
   {
@@ -117,7 +117,7 @@ export const services: Service[] = [
     process: process5,
     metaTitle: "Web Development Services | Famezop Technologies",
     metaDescription:
-      "Modern, high-performance web development — Next.js architecture, technical SEO, and design systems built for speed and scale.",
+      "Modern, high-performance web development — Next.js architecture, technical SEO, and design systems engineered for speed, scale, and Core Web Vitals.",
     order: 5,
   },
   {
@@ -139,7 +139,7 @@ export const services: Service[] = [
     process: process5,
     metaTitle: "UI/UX Design Services | Famezop Technologies",
     metaDescription:
-      "Research-driven UI/UX design — from user research and prototyping to accessible, engineering-ready design systems.",
+      "Research-driven UI/UX design — from user research and prototyping to accessible, WCAG 2.1 AA-compliant, engineering-ready design systems for web and mobile.",
     order: 6,
   },
   {
@@ -161,7 +161,7 @@ export const services: Service[] = [
     process: process5,
     metaTitle: "Ecommerce Development Company | Famezop Technologies",
     metaDescription:
-      "Headless and platform ecommerce development built for conversion — payments, catalog, checkout, and peak-traffic reliability.",
+      "Headless and platform ecommerce development built for conversion — payments, catalog and promotions engines, checkout optimization, and peak-traffic reliability.",
     order: 7,
   },
   {
@@ -183,7 +183,7 @@ export const services: Service[] = [
     process: process5,
     metaTitle: "Enterprise Software Solutions | Famezop Technologies",
     metaDescription:
-      "Enterprise-grade systems integration, platform modernization, and compliance-aware engineering for complex organizations.",
+      "Enterprise-grade systems integration, platform modernization, and compliance-aware engineering (SOC 2, ISO 27001) for complex, regulated organizations.",
     order: 8,
   },
   {
@@ -205,7 +205,7 @@ export const services: Service[] = [
     process: process5,
     metaTitle: "Cloud Architecture & Migration Services | Famezop Technologies",
     metaDescription:
-      "Cloud architecture, migration, and cost optimization across AWS, Azure, and GCP with infrastructure-as-code and disaster recovery built in.",
+      "Cloud architecture, migration, and cost optimization across AWS, Azure, and GCP — with infrastructure-as-code, observability, and disaster recovery built in.",
     order: 9,
   },
   {
@@ -227,7 +227,7 @@ export const services: Service[] = [
     process: process5,
     metaTitle: "Cybersecurity & Application Security Services | Famezop Technologies",
     metaDescription:
-      "Threat modeling, penetration testing, and compliance-ready security engineering built into your development lifecycle.",
+      "Threat modeling, penetration testing, and compliance-ready security engineering built into your development lifecycle, not bolted on after launch.",
     order: 10,
   },
   {
@@ -249,7 +249,7 @@ export const services: Service[] = [
     process: process5,
     metaTitle: "QA & Software Testing Services | Famezop Technologies",
     metaDescription:
-      "Automated and manual QA integrated into every sprint — test strategy, automation frameworks, and CI/CD-integrated quality gates.",
+      "Automated and manual QA integrated into every sprint — test strategy, automation frameworks, performance testing, and CI/CD-integrated quality gates.",
     order: 11,
   },
   {
@@ -271,7 +271,7 @@ export const services: Service[] = [
     process: process5,
     metaTitle: "Digital Transformation Consulting | Famezop Technologies",
     metaDescription:
-      "Process digitization, legacy modernization, and change management that drives real technology adoption, not just deployment.",
+      "Process digitization, legacy modernization, and change management that drives real technology adoption across your teams — not just a deployment.",
     order: 12,
   },
   {
@@ -293,7 +293,7 @@ export const services: Service[] = [
     process: process5,
     metaTitle: "Blockchain Development Services | Famezop Technologies",
     metaDescription:
-      "Smart contract development, tokenization, and distributed ledger systems engineered with fintech-grade security review.",
+      "Smart contract development, tokenization, and distributed ledger systems engineered with the security review depth fintech-grade software requires.",
     order: 13,
   },
   {
@@ -315,7 +315,7 @@ export const services: Service[] = [
     process: process5,
     metaTitle: "Data Engineering Services | Famezop Technologies",
     metaDescription:
-      "ETL pipelines, data warehousing, and analytics infrastructure that turn scattered data into real-time decisions.",
+      "ETL/ELT pipelines, data warehouse and lakehouse architecture, and analytics infrastructure that turn scattered data into real-time decisions your teams can act on.",
     order: 14,
   },
   {
@@ -337,7 +337,7 @@ export const services: Service[] = [
     process: process5,
     metaTitle: "Dedicated Development Teams | Famezop Technologies",
     metaDescription:
-      "Vetted, dedicated engineers embedded in your workflow — flexible scaling, transparent reporting, long-term team continuity.",
+      "Vetted, dedicated engineers embedded in your workflow — flexible monthly scaling, transparent time tracking, and long-term continuity, not rotating contractors.",
     order: 15,
   },
   {
@@ -359,7 +359,7 @@ export const services: Service[] = [
     process: process5,
     metaTitle: "Startup MVP Development | Famezop Technologies",
     metaDescription:
-      "Fast, production-grade MVP development for startups — scoped to validate your hypothesis without over-engineering.",
+      "Fast, production-grade MVP development for startups — scoped to validate your core hypothesis without over-engineering for scale you don't have yet.",
     order: 16,
   },
   {
@@ -381,7 +381,7 @@ export const services: Service[] = [
     process: process5,
     metaTitle: "Product Engineering Partnership | Famezop Technologies",
     metaDescription:
-      "Full-lifecycle product engineering partnership — roadmap, architecture, and continuous iteration as an extension of your team.",
+      "Full-lifecycle product engineering partnership — roadmap, architecture, and continuous iteration cycles as an embedded extension of your product team.",
     order: 17,
   },
 ];

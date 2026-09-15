@@ -14,7 +14,7 @@ export const revalidate = 60;
 export const metadata: Metadata = buildMetadata({
   title: "About Us",
   description:
-    "Famezop Technologies is a global software development company with teams in Kathmandu, Bengaluru, and Dubai, building custom software and AI systems for clients worldwide.",
+    "Famezop Technologies is a global software company with teams in Kathmandu, Bengaluru, and Dubai, building custom software and AI systems for clients worldwide.",
   path: "/about",
 });
 
