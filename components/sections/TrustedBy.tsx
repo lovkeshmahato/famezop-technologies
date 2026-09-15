@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Marquee } from "@/components/animations/Marquee";
 import { trustedByLogos } from "@/lib/content/misc";
 
@@ -10,12 +11,18 @@ export function TrustedBy() {
         </p>
         <Marquee>
           {trustedByLogos.map((logo) => (
-            <span
-              key={logo}
-              className="shrink-0 font-heading text-xl font-semibold text-ink/25 grayscale transition-all duration-300 hover:text-ink/70 hover:grayscale-0"
+            <div
+              key={logo.name}
+              className="flex h-16 w-32 shrink-0 items-center justify-center rounded-control-sm border border-ink/5 bg-white px-4 opacity-60 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0"
             >
-              {logo}
-            </span>
+              <Image
+                src={logo.src}
+                alt={logo.name}
+                width={logo.width}
+                height={logo.height}
+                className="max-h-8 w-auto object-contain"
+              />
+            </div>
           ))}
         </Marquee>
       </div>

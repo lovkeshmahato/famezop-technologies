@@ -8,8 +8,19 @@ export const stats = [
 ];
 
 export const trustedByLogos = [
-  "MeroPasal", "CareCloud", "ZapTrail", "EduNeta", "FinLynk", "Haven Relief",
-  "Orbit Logistics", "Nomad Health", "Dhukuti Bank", "GulfCart", "Sarathi Gov",
+  { name: "The Elite Cars", src: "/logos/elite-cars.png", width: 364, height: 200 },
+  { name: "Deals on Wheels Rent A Car", src: "/logos/deals-on-wheels.png", width: 205, height: 200 },
+  { name: "Drink Pure Fruits", src: "/logos/drink-pure-fruits.png", width: 177, height: 141 },
+  { name: "King's Organic Farm", src: "/logos/kings-organic-farm.png", width: 179, height: 157 },
+  { name: "The Ister Foundation", src: "/logos/ister-foundation.png", width: 480, height: 179 },
+  { name: "Masterkey Rent A Car", src: "/logos/masterkey-rent-a-car.png", width: 480, height: 170 },
+  { name: "UAE Stories", src: "/logos/uae-stories.png", width: 342, height: 200 },
+  { name: "Azizi Developments", src: "/logos/azizi-developments.png", width: 418, height: 200 },
+  { name: "smallcase", src: "/logos/smallcase.png", width: 480, height: 120 },
+  { name: "Rage Coffee", src: "/logos/rage-coffee.png", width: 242, height: 117 },
+  { name: "CashKaro", src: "/logos/cashkaro.png", width: 417, height: 91 },
+  { name: "Masterkey Media", src: "/logos/masterkey-media.png", width: 288, height: 169 },
+  { name: "Royal Imperium by Al Khalidiah Holding", src: "/logos/royal-imperium.png", width: 200, height: 200 },
 ];
 
 export const techStack = {
