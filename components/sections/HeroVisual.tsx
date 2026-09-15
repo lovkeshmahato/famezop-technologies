@@ -25,26 +25,42 @@ export function HeroVisual() {
       <div className="absolute inset-10 rounded-full border border-blue/15" />
       <div className="absolute inset-24 rounded-full border border-blue/10" />
 
-      {/* Main dashboard card */}
+      {/* Main code editor card */}
       <M
-        className="absolute left-1/2 top-1/2 w-64 -translate-x-1/2 -translate-y-1/2 rounded-card border border-ink/10 bg-white p-5 shadow-soft"
+        className="absolute left-1/2 top-1/2 w-72 -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-card border border-ink/10 bg-ink shadow-soft"
         {...(reduced ? {} : float(0, 10))}
       >
-        <div className="flex items-center justify-between">
-          <span className="h-2 w-2 rounded-full bg-blue" />
-          <span className="text-[10px] font-medium text-gray-body">Live delivery</span>
+        <div className="flex items-center gap-2 border-b border-white/10 bg-white/5 px-4 py-2.5">
+          <span className="h-2.5 w-2.5 rounded-full bg-[#FF5F57]" />
+          <span className="h-2.5 w-2.5 rounded-full bg-[#FEBC2E]" />
+          <span className="h-2.5 w-2.5 rounded-full bg-[#28C840]" />
+          <span className="ml-2 font-mono text-[10px] text-white/40">deploy.ts</span>
         </div>
-        <div className="mt-4 flex items-end gap-1.5">
-          {[40, 65, 45, 80, 60, 95, 70].map((h, i) => (
-            <div key={i} className="flex-1 rounded-sm bg-blue-soft" style={{ height: 48 }}>
-              <div
-                className="w-full rounded-sm bg-blue"
-                style={{ height: `${h}%`, marginTop: `${100 - h}%` }}
-              />
-            </div>
-          ))}
+        <div className="space-y-1.5 p-4 font-mono text-[11px] leading-relaxed">
+          <p>
+            <span className="text-blue">async function</span>{" "}
+            <span className="text-white/90">deploy</span>
+            <span className="text-white/40">() {"{"}</span>
+          </p>
+          <p className="pl-4">
+            <span className="text-blue">await</span> <span className="text-white/90">build</span>
+            <span className="text-white/40">.run();</span>
+          </p>
+          <p className="pl-4">
+            <span className="text-white/90">tests</span>
+            <span className="text-white/40">.</span>
+            <span className="text-white/90">pass</span>
+            <span className="text-white/40">(</span>
+            <span className="text-emerald-400">247</span>
+            <span className="text-white/40">);</span>
+          </p>
+          <p className="pl-4 text-white/40">
+            <span className="text-emerald-400">{"// ✓ shipped to production"}</span>
+          </p>
+          <p>
+            <span className="text-white/40">{"}"}</span>
+          </p>
         </div>
-        <p className="mt-4 text-xs font-medium text-ink">Sprint velocity +18%</p>
       </M>
 
       {/* Floating stat chip */}
@@ -65,11 +81,14 @@ export function HeroVisual() {
         <p className="text-sm font-medium text-white">Automating 40 tasks/day</p>
       </M>
 
-      {/* Small floating dot */}
+      {/* Deploy success badge */}
       <M
-        className="absolute bottom-4 right-16 h-3 w-3 rounded-full bg-blue"
+        className="absolute bottom-2 right-6 flex items-center gap-1.5 rounded-full border border-emerald-500/20 bg-white px-3 py-1.5 shadow-soft-sm"
         {...(reduced ? {} : float(0.3, 8))}
-      />
+      >
+        <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+        <span className="text-[10px] font-medium text-ink">Build passing</span>
+      </M>
     </div>
   );
 }
