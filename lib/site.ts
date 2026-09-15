@@ -12,8 +12,8 @@ export const siteConfig = {
     instagram: "https://www.instagram.com/famezoptechnologies",
   },
   email: "hello@famezoptechnologies.com",
-  phone: "+977-1-4000000",
-  whatsapp: "https://wa.me/9779800000000",
+  phone: "+977-9701420345",
+  whatsapp: "https://wa.me/9779701420345",
 };
 
 export const offices = [
@@ -24,7 +24,7 @@ export const offices = [
     address: "Durbar Marg, Kathmandu 44600, Nepal",
     streetAddress: "Durbar Marg",
     postalCode: "44600",
-    phone: "+977-1-4000000",
+    phone: "+977-9701420345",
     isHQ: true,
     coords: { top: "38%", left: "72%" },
   },
@@ -36,7 +36,7 @@ export const offices = [
     streetAddress: "Koramangala",
     postalCode: "560034",
     addressRegion: "Karnataka",
-    phone: "+91-80-40000000",
+    phone: "+91-9871020532",
     isHQ: false,
     coords: { top: "44%", left: "66%" },
   },
@@ -46,7 +46,7 @@ export const offices = [
     city: "Dubai",
     address: "Business Bay, Dubai, United Arab Emirates",
     streetAddress: "Business Bay",
-    phone: "+971-4-0000000",
+    phone: "+971-547508409",
     isHQ: false,
     coords: { top: "40%", left: "58%" },
   },
