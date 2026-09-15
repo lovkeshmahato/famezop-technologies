@@ -24,6 +24,7 @@ const jobs = [
   { file: "cashkaro_logo_v1.svg", slug: "cashkaro", name: "CashKaro" },
   { file: "timg_4303.webp", slug: "masterkey-media", name: "Masterkey Media", recolor: true },
   { file: "Лого.png", slug: "royal-imperium", name: "Royal Imperium by Al Khalidiah Holding" },
+  { file: "automark-at-cann91-technologies-removebg-preview.webp", slug: "automark-india", name: "Auto Mark India" },
 ];
 
 const results = [];

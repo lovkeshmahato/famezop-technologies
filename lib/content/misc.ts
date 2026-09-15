@@ -21,6 +21,7 @@ export const trustedByLogos = [
   { name: "CashKaro", src: "/logos/cashkaro.png", width: 417, height: 91 },
   { name: "Masterkey Media", src: "/logos/masterkey-media.png", width: 288, height: 169 },
   { name: "Royal Imperium by Al Khalidiah Holding", src: "/logos/royal-imperium.png", width: 200, height: 200 },
+  { name: "Auto Mark India", src: "/logos/automark-india.png", width: 259, height: 92 },
 ];
 
 export const techStack = {
