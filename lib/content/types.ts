@@ -2,6 +2,8 @@ export type SeoFields = {
   metaTitle?: string;
   metaDescription?: string;
   ogImage?: string;
+  /** Sanity `_updatedAt` — real content-change timestamp, used for sitemap lastModified. */
+  lastModified?: string;
 };
 
 export type Service = SeoFields & {

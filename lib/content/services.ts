@@ -400,7 +400,7 @@ export function getServiceCategories() {
 
 const SERVICE_PROJECTION = `{
   "slug": slug.current, title, category, icon, summary, problem, included, process, order,
-  "metaTitle": seo.metaTitle, "metaDescription": seo.metaDescription
+  "metaTitle": seo.metaTitle, "metaDescription": seo.metaDescription, "lastModified": _updatedAt
 }`;
 
 export async function fetchServices() {

@@ -174,7 +174,7 @@ export function getIndustryBySlug(slug: string) {
 
 const INDUSTRY_PROJECTION = `{
   "slug": slug.current, title, icon, summary, challenges, solutions,
-  "metaTitle": seo.metaTitle, "metaDescription": seo.metaDescription
+  "metaTitle": seo.metaTitle, "metaDescription": seo.metaDescription, "lastModified": _updatedAt
 }`;
 
 export async function fetchIndustries() {

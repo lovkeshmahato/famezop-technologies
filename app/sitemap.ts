@@ -22,6 +22,13 @@ const staticRoutes = [
   "/sitemap",
 ];
 
+// Anchor for routes with no real per-content update timestamp (i.e. not
+// sourced from Sanity's _updatedAt), so the sitemap doesn't claim every
+// static marketing page changed on every deploy. Bump this when those pages
+// actually change, or when a service/industry entry's own _updatedAt is
+// unavailable (e.g. running on fallback content with no Sanity connected).
+const STATIC_LAST_MODIFIED = new Date("2026-09-15");
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const [services, industries, caseStudies, jobs] = await Promise.all([
     fetchServices(),
@@ -29,11 +36,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     fetchCaseStudies(),
     fetchJobs(),
   ]);
-  const now = new Date();
 
   const entries: MetadataRoute.Sitemap = staticRoutes.map((path) => ({
     url: `${siteConfig.url}${path}`,
-    lastModified: now,
+    lastModified: STATIC_LAST_MODIFIED,
     changeFrequency: path === "" ? "weekly" : "monthly",
     priority: path === "" ? 1 : 0.7,
   }));
@@ -41,7 +47,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   for (const service of services) {
     entries.push({
       url: `${siteConfig.url}/services/${service.slug}`,
-      lastModified: now,
+      lastModified: service.lastModified ? new Date(service.lastModified) : STATIC_LAST_MODIFIED,
       changeFrequency: "monthly",
       priority: 0.8,
     });
@@ -50,7 +56,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   for (const industry of industries) {
     entries.push({
       url: `${siteConfig.url}/industries/${industry.slug}`,
-      lastModified: now,
+      lastModified: industry.lastModified ? new Date(industry.lastModified) : STATIC_LAST_MODIFIED,
       changeFrequency: "monthly",
       priority: 0.7,
     });
