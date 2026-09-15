@@ -4,7 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowRight, Quote } from "lucide-react";
 import { getAllCaseStudies, fetchCaseStudyBySlug, fetchCaseStudies } from "@/lib/content/case-studies";
-import { buildMetadata, breadcrumbJsonLd, jsonLdScript } from "@/lib/seo";
+import { buildMetadata, breadcrumbJsonLd, articleJsonLd, jsonLdScript } from "@/lib/seo";
 import { CTASection } from "@/components/sections/CTASection";
 import { Counter } from "@/components/animations/Counter";
 import { ScrollReveal } from "@/components/animations/ScrollReveal";
@@ -56,6 +56,18 @@ export default async function CaseStudyDetailPage({ params }: { params: { slug: 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={jsonLdScript(breadcrumbJsonLd(breadcrumbs))} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={jsonLdScript(
+          articleJsonLd({
+            title: caseStudy.title,
+            description: caseStudy.metaDescription || caseStudy.summary,
+            slug: caseStudy.slug,
+            image: caseStudy.image,
+            publishedAt: caseStudy.publishedAt,
+          })
+        )}
+      />
 
       <section className="pb-10 pt-28 sm:pb-14 sm:pt-36">
         <div className="container-content">
