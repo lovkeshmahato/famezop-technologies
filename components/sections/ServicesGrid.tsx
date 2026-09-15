@@ -43,7 +43,7 @@ export function ServicesGrid({ services }: { services: Service[] }) {
                 onClick={() => setActive(category)}
                 aria-pressed={active === category}
                 className={cn(
-                  "rounded-full border px-4 py-2 text-sm font-medium transition-colors",
+                  "rounded-full border px-4 py-3 text-sm font-medium transition-colors",
                   active === category
                     ? "border-blue bg-blue text-white font-semibold shadow-[0_0_0_3px_rgba(0,82,255,0.18)]"
                     : "border-ink/15 text-ink/70 hover:border-ink/30"

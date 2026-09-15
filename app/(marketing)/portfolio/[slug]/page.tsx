@@ -98,7 +98,14 @@ export default async function CaseStudyDetailPage({ params }: { params: { slug: 
 
         <div className="container-content mt-10">
           <div className="relative aspect-[16/8] overflow-hidden rounded-card bg-offwhite">
-            <Image src={caseStudy.image} alt={`${caseStudy.title} cover`} fill className="object-cover" priority />
+            <Image
+              src={caseStudy.image}
+              alt={`${caseStudy.title} cover`}
+              fill
+              className="object-cover"
+              priority
+              sizes="(max-width: 1440px) 100vw, 1440px"
+            />
           </div>
         </div>
       </section>
