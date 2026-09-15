@@ -71,10 +71,9 @@ export function AnimatedText({
   }
 
   return (
-    <Tag className={className}>
-      <span className="sr-only">{text}</span>
+    <Tag className={className} aria-label={text}>
       <motion.span
-        aria-hidden
+        aria-hidden="true"
         className="block"
         initial="hidden"
         whileInView="visible"
