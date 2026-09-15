@@ -17,7 +17,6 @@ const jobs = [
   { file: "kingsorganicfarm-at-cann91-technologies.webp", slug: "kings-organic-farm", name: "King's Organic Farm" },
   { file: "The_Ister_foundation_3.webp", slug: "ister-foundation", name: "The Ister Foundation" },
   { file: "mk-logo-white-full.png", slug: "masterkey-rent-a-car", name: "Masterkey Rent A Car", recolor: true },
-  { file: "UAE-Stories-Logo-White-e1722043129463-1536x867-1 (1).webp", slug: "uae-stories", name: "UAE Stories", recolor: true },
   { file: "images (1).jpeg", slug: "azizi-developments", name: "Azizi Developments" },
   { file: "logo-full.svg", slug: "smallcase", name: "smallcase" },
   { file: "Rage_Coffee_New_Logo_x200_2x-edited_x180@2x.avif", slug: "rage-coffee", name: "Rage Coffee" },

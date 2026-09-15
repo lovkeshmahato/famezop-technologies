@@ -14,7 +14,6 @@ export const trustedByLogos = [
   { name: "King's Organic Farm", src: "/logos/kings-organic-farm.png", width: 179, height: 157 },
   { name: "The Ister Foundation", src: "/logos/ister-foundation.png", width: 480, height: 179 },
   { name: "Masterkey Rent A Car", src: "/logos/masterkey-rent-a-car.png", width: 480, height: 170 },
-  { name: "UAE Stories", src: "/logos/uae-stories.png", width: 342, height: 200 },
   { name: "Azizi Developments", src: "/logos/azizi-developments.png", width: 418, height: 200 },
   { name: "smallcase", src: "/logos/smallcase.png", width: 480, height: 120 },
   { name: "Rage Coffee", src: "/logos/rage-coffee.png", width: 242, height: 117 },
