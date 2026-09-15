@@ -5,7 +5,12 @@ type BuildMetadataArgs = {
   title: string;
   description: string;
   path: string;
-  image?: string;
+  /**
+   * Pass `false` for routes that ship their own `opengraph-image.tsx` file
+   * convention — an explicit `openGraph.images`/`twitter.images` array here
+   * would silently shadow that per-route generated image.
+   */
+  image?: string | false;
   type?: "website" | "article";
   noIndex?: boolean;
 };
@@ -19,7 +24,7 @@ export function buildMetadata({
   noIndex = false,
 }: BuildMetadataArgs): Metadata {
   const url = `${siteConfig.url}${path}`;
-  const ogImage = image || siteConfig.ogImage;
+  const ogImage = image === false ? undefined : image || siteConfig.ogImage;
 
   return {
     title,
@@ -33,7 +38,7 @@ export function buildMetadata({
       description,
       url,
       siteName: siteConfig.name,
-      images: [{ url: ogImage, width: 1200, height: 630, alt: title }],
+      ...(ogImage ? { images: [{ url: ogImage, width: 1200, height: 630, alt: title }] } : {}),
       locale: "en_US",
       type,
     },
@@ -41,7 +46,7 @@ export function buildMetadata({
       card: "summary_large_image",
       title,
       description,
-      images: [ogImage],
+      ...(ogImage ? { images: [ogImage] } : {}),
     },
   };
 }

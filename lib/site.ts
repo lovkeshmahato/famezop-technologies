@@ -4,7 +4,7 @@ export const siteConfig = {
   description:
     "Famezop Technologies is a global software development company building custom software, AI solutions, SaaS products, and enterprise systems for businesses across Nepal, India, the UAE, and worldwide.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://famezoptechnologies.com",
-  ogImage: "/og/default.svg",
+  ogImage: "/og",
   links: {
     linkedin: "https://www.linkedin.com/company/famezop-technologies",
     twitter: "https://twitter.com/famezoptech",

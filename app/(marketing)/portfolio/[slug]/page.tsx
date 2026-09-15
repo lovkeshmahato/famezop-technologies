@@ -23,6 +23,8 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     title: caseStudy.metaTitle || caseStudy.title,
     description: caseStudy.metaDescription || caseStudy.summary,
     path: `/portfolio/${caseStudy.slug}`,
+    // This route has its own opengraph-image.tsx — don't set a competing image here.
+    image: false,
   });
 }
 
