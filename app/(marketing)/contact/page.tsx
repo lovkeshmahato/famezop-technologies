@@ -26,18 +26,18 @@ export default function ContactPage() {
       />
 
       <section className="section-padding">
-        <div className="container-content grid grid-cols-1 gap-16 lg:grid-cols-12">
+        <div className="container-content grid grid-cols-1 gap-12 lg:grid-cols-12">
           <div className="lg:col-span-7">
-            <div className="rounded-card border border-ink/10 bg-white p-8">
+            <div className="rounded-card border border-ink/10 bg-white p-6">
               <ContactForm />
             </div>
           </div>
 
           <div className="lg:col-span-5">
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-3">
               <a
                 href={`mailto:${siteConfig.email}`}
-                className="flex items-center gap-4 rounded-card border border-ink/10 bg-white p-5 transition-colors hover:border-blue/40"
+                className="flex items-center gap-4 rounded-card border border-ink/10 bg-white p-4 transition-colors hover:border-blue/40"
               >
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-control bg-blue-soft text-blue">
                   <Mail className="h-4.5 w-4.5" />
@@ -49,7 +49,7 @@ export default function ContactPage() {
               </a>
               <a
                 href={`tel:${siteConfig.phone}`}
-                className="flex items-center gap-4 rounded-card border border-ink/10 bg-white p-5 transition-colors hover:border-blue/40"
+                className="flex items-center gap-4 rounded-card border border-ink/10 bg-white p-4 transition-colors hover:border-blue/40"
               >
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-control bg-blue-soft text-blue">
                   <Phone className="h-4.5 w-4.5" />
@@ -63,7 +63,7 @@ export default function ContactPage() {
                 href={siteConfig.whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-4 rounded-card border border-ink/10 bg-white p-5 transition-colors hover:border-blue/40"
+                className="flex items-center gap-4 rounded-card border border-ink/10 bg-white p-4 transition-colors hover:border-blue/40"
               >
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-control bg-blue-soft text-blue">
                   <MessageCircle className="h-4.5 w-4.5" />
@@ -75,9 +75,9 @@ export default function ContactPage() {
               </a>
             </div>
 
-            <div className="mt-8 space-y-4">
+            <div className="mt-6 space-y-3">
               {offices.map((office) => (
-                <div key={office.country} className="rounded-card border border-ink/10 bg-offwhite p-5">
+                <div key={office.country} className="rounded-card border border-ink/10 bg-offwhite p-4">
                   <div className="flex items-start gap-3">
                     <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-blue" />
                     <div>
@@ -90,7 +90,7 @@ export default function ContactPage() {
                   </div>
                   <iframe
                     title={`Map — ${office.city}, ${office.country}`}
-                    className="mt-4 h-40 w-full rounded-control border-0"
+                    className="mt-3 h-28 w-full rounded-control border-0"
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                     src={`https://www.google.com/maps?q=${encodeURIComponent(office.address)}&output=embed`}

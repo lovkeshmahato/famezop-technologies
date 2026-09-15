@@ -13,11 +13,11 @@ export function GlobalPresenceSection() {
           className="max-w-2xl text-balance font-heading text-3xl font-semibold tracking-tight text-white sm:text-4xl"
         />
 
-        <div className="mt-10">
+        <div className="mt-8">
           <GlobalPresenceMap />
         </div>
 
-        <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-3">
+        <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-3">
           {offices.map((office) => (
             <div key={office.country} className="rounded-card border border-white/10 bg-white/5 p-5">
               <p className="font-heading text-base font-semibold text-white">

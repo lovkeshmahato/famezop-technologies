@@ -67,10 +67,10 @@ export default async function AboutPage() {
       <section className="section-padding bg-ink">
         <div className="container-content">
           <h2 className="font-heading text-2xl font-semibold text-white sm:text-3xl">Global presence</h2>
-          <div className="mt-10">
+          <div className="mt-8">
             <GlobalPresenceMap />
           </div>
-          <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-3">
+          <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-3">
             {offices.map((office) => (
               <div key={office.country} className="rounded-card border border-white/10 bg-white/5 p-5">
                 <p className="font-heading text-base font-semibold text-white">

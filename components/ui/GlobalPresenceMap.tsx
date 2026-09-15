@@ -22,7 +22,7 @@ export function GlobalPresenceMap() {
   const reduced = useReducedMotion();
 
   return (
-    <div className="relative aspect-[16/10] w-full overflow-hidden rounded-card border border-white/10 bg-[#0D0F1A]">
+    <div className="relative aspect-[16/10] w-full overflow-hidden rounded-card border border-white/10 bg-[#0D0F1A] md:aspect-[16/6] lg:aspect-[16/5]">
       <div className="noise-grid absolute inset-0" />
       <div
         className="absolute inset-0 opacity-40"
@@ -63,7 +63,12 @@ export function GlobalPresenceMap() {
           <div className="relative flex flex-col items-center">
             <span className="absolute h-3 w-3 rounded-full bg-blue animate-pulse-marker" aria-hidden />
             <span className="relative h-2.5 w-2.5 rounded-full bg-blue shadow-[0_0_12px_2px_rgba(0,82,255,0.7)]" />
-            <div className="absolute top-5 whitespace-nowrap rounded-control border border-white/20 bg-ink/70 px-2.5 py-1 text-xs font-semibold text-white backdrop-blur-sm">
+            {/* The three pins sit close enough together that their labels
+                overlap at any width below the container's ~1312px content
+                cap (max-w-content: 1440px minus padding) — confirmed clean
+                only at that cap, so only show them there. The office cards
+                right underneath already spell out the same city/country. */}
+            <div className="absolute top-5 hidden whitespace-nowrap rounded-control border border-white/20 bg-ink/70 px-2.5 py-1 text-xs font-semibold text-white backdrop-blur-sm 2xl:block">
               {office.city}, {office.country}
             </div>
           </div>
